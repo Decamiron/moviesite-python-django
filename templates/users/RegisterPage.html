@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{%block title%}&blacktriangleleft; Register &blacktriangleright;{%endblock%}
+{%block content%}
+<style>
+    body{
+        background: -webkit-linear-gradient(45deg, rgb(54, 33, 151), rgb(35, 21, 57));
+        background: -moz-linear-gradient(45deg, rgb(54, 33, 151), rgb(35, 21, 57));
+        background: linear-gradient(45deg, rgb(54, 33, 151), rgb(35, 21, 57));
+    }
+</style>
+<div class="container mt-5 border border-white w-50 text-white rounded-1 bg-dark">
+    <p class="text-center fs-1">Register</p>
+    <form class="row g-3 mx-5 my-5" method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        {%for f in form %}
+        <div class="col-12">
+            <p><label style="display: inline-block; min-width: 150px; vertical-align: top;" class="form-label"
+                      for="{{f.id_for_lable}}">{{f.label}}:</label>{{f}}</p>
+            <div class="text-danger">{{f.errors}}</div>
+        </div>
+        {%endfor%}
+        <button type="submit" class="col-3 btn btn-success"> Register</button>
+    </form>
+</div>
+
+{%endblock%}

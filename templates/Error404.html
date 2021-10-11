@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{%block title%}Error 404{% endblock %}
+
+{% block content %}
+<div class="container-fluid mx-auto text-centre w-50 mt-3">
+    <p class="text-centre text-danger fw-bold fst-italic fs-3">Oooups!  No such page exists&dzigrarr;
+        <a class="text-success" href="{% url 'main:index' %}">Return back samurai </a>
+    </p>
+    <img class="figure-img img-fluid rounded d-block" src="https://public-assets.toggl.com/b/static/404Image-3aea842baa39f40a21036fa29832c57d.svg">
+</div>
+{% endblock %}

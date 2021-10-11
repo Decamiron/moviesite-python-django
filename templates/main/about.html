@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+
+{%block title%}About{% endblock title %}
+
+{% block content %}
+<div class="container text-warning mt-5">
+    <ul class="list-group text-warning">
+        <p class="text-center"> Тестовый проект: Сайт фильмов </p><hr>
+        Написать простой сайт для ведения списка просмотренных фильмов. Проект должен включать:
+        <li class="list-group-item bg-dark text-warning">
+            + регистрация / логин
+        </li>
+        <li class="list-group-item bg-dark text-warning">
+            + список всех фильмов с фильтрацией по жанру (у фильма может быть несколько жанров)
+        </li>
+        <li class="list-group-item bg-dark text-warning">
+            + добавление фильма к себе в один из списков (запланировано, просмотрено, брошено)
+        </li>
+        <li class="list-group-item bg-dark text-warning">
+            + удаление фильма из списка
+        </li>
+        <li class="list-group-item bg-dark text-warning">
+            + перенос фильма из одного списка в другой
+        </li>
+        <li class="list-group-item bg-dark text-warning">
+            + выставление (изменение уже поставленной) оценки фильму и отображение средней оценки на странице фильма (можно еще сделать сортировку по оценкам на списке всех фильмов)
+        </li>
+        <li class="list-group-item bg-dark text-warning">
+            + на странице фильма показывать фильмы из той же серии (например на странице фильма терминатор 1, показывать
+            и терминатор 2, 3 в блоке из той же серии)
+        </li>
+        <li class="list-group-item bg-dark text-warning">
+            + возможность оставлять комментарии о фильме
+        </li>
+        <li class="list-group-item bg-dark text-warning">
+            + возможность делать свой список публичным/скрытым, другие юзеры должны иметь возможность его просматривать.
+        </li>
+    </ul>
+</div>
+{% endblock content %}

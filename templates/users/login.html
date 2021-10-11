@@ -1,0 +1,29 @@
+{%extends 'index.html'%}
+{%block title%}&DoubleLongLeftArrow; Log in &DoubleLongRightArrow;{%endblock%}
+
+{%block content%}
+<div id="login">
+    <h3 class="text-center text-white pt-5"></h3>
+    <div class="container rounded-3 border border-white w-50">
+        <div id="login-row" class="row justify-content-center align-items-center my-4">
+            <div id="login-column" class="col-md-6">
+                <div id="login-box " class="col-md-12">
+                    <form id="login-form" class="form " action="" method="post">
+                        <h3 class="text-center text-info">Login</h3>
+                        {%csrf_token%}
+                        {%for f in form%}
+                        <div class="form-group">
+                            <label for="{{f.id_for_label}}" class="text-info">{{f.label}}</label>{{f}}<br>
+                        </div>
+                        <div class="text-warning">{{f.errors}}</div>
+                        {%endfor%}
+                        <button class="btn btn-success">Log in</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="text-warning text-center">{{form.non_field_errors}}</div>
+    </div>
+
+</div>
+{%endblock%}

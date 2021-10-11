@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6cf60758-abaa-4168-ace7-593efed1e1f3" name="Changes" comment="Pip packege" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="Final" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Final" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/moviesite/settings.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/moviesite/urls.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/main/views.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/index.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/main/film_detail.html" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="1yjmihftYHnAZ6o4gTo26Cj7yOB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql&#10;sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\My\Python\Django\moviesite\media\users_photo" />
+      <recent name="D:\My\Python\Django\moviesite\static" />
+      <recent name="D:\My\Python\Django\moviesite\media" />
+      <recent name="D:\My\Python\Django\moviesite\media\movies\film_posters" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\My\Python\Django\moviesite\media" />
+      <recent name="D:\My\Python\Django\moviesite\media\users_photo" />
+      <recent name="D:\My\Python\Django\moviesite\static\users" />
+      <recent name="D:\My\Python\Django\moviesite\templates\users" />
+      <recent name="D:\My\Python\Django\moviesite\media\movies" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="moviesite" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="moviesite" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Test" />
+        <item itemvalue="Python.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6cf60758-abaa-4168-ace7-593efed1e1f3" name="Changes" comment="" />
+      <created>1632773501314</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632773501314</updated>
+      <workItem from="1633170922750" duration="9937000" />
+      <workItem from="1633183985732" duration="651000" />
+      <workItem from="1633186126229" duration="21405000" />
+      <workItem from="1633252814231" duration="3557000" />
+      <workItem from="1633287496103" duration="5455000" />
+      <workItem from="1633340141680" duration="35514000" />
+      <workItem from="1633428225092" duration="32083000" />
+      <workItem from="1633527661712" duration="30069000" />
+      <workItem from="1633591998982" duration="5801000" />
+      <workItem from="1633599319303" duration="44273000" />
+      <workItem from="1633688830028" duration="40437000" />
+      <workItem from="1633733322162" duration="4419000" />
+      <workItem from="1633769761448" duration="12934000" />
+      <workItem from="1633786005261" duration="2486000" />
+      <workItem from="1633788722824" duration="539000" />
+      <workItem from="1633789276478" duration="7000" />
+      <workItem from="1633789294589" duration="75000" />
+      <workItem from="1633789380573" duration="1603000" />
+      <workItem from="1633888660738" duration="803000" />
+      <workItem from="1633949375396" duration="1018000" />
+      <workItem from="1633957450197" duration="5098000" />
+    </task>
+    <task id="LOCAL-00001" summary="zxc">
+      <created>1633186394999</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1633186394999</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add migrate">
+      <created>1633186958973</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1633186958973</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update database">
+      <created>1633186998009</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1633186998009</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1931">
+      <created>1633192304245</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1633192304245</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add film series and fix imgFilm bug">
+      <created>1633207704837</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1633207704837</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add pagination">
+      <created>1633350546907</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1633350546907</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add register and login">
+      <created>1633377498035</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1633377498035</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add debug Toolbar">
+      <created>1633435866279</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1633435866279</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ADD new user structure">
+      <created>1633532857044</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1633532857044</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add auntification">
+      <created>1633546489716</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1633546489716</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add search func">
+      <created>1633602697387</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1633602697387</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add Comments and Raitings">
+      <created>1633635441781</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1633635441781</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add Film Filter">
+      <created>1633691588643</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1633691588643</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add movie list">
+      <created>1633777853079</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1633777853079</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fix image bug">
+      <created>1633784213405</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1633784213405</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Cache">
+      <created>1633787400925</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1633787400925</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Cache">
+      <created>1633788397538</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1633788397538</updated>
+    </task>
+    <task id="LOCAL-00018" summary="gitgnore">
+      <created>1633788895737</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1633788895737</updated>
+    </task>
+    <task id="LOCAL-00019" summary="gitgnore">
+      <created>1633789004032</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1633789004032</updated>
+    </task>
+    <task id="LOCAL-00020" summary="f">
+      <created>1633789043611</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1633789043611</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Fix cache">
+      <created>1633790785932</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1633790785932</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Fix bugs">
+      <created>1633791219817</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1633791219817</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Changed the concept of adding a movie to the list">
+      <created>1633961790567</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1633961790567</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Pip packege">
+      <created>1633962493012</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1633962493012</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="BEK_SORT_TYPE" value="1" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="Final" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="zxc" />
+    <MESSAGE value="Add migrate" />
+    <MESSAGE value="Update database" />
+    <MESSAGE value="1931" />
+    <MESSAGE value="Add film series and fix imgFilm bug" />
+    <MESSAGE value="Add pagination" />
+    <MESSAGE value="Add register and login" />
+    <MESSAGE value="Add debug Toolbar" />
+    <MESSAGE value="ADD new user structure" />
+    <MESSAGE value="Add auntification" />
+    <MESSAGE value="Add search func" />
+    <MESSAGE value="Add Comments and Raitings" />
+    <MESSAGE value="Add Film Filter" />
+    <MESSAGE value="Add movie list" />
+    <MESSAGE value="Fix image bug" />
+    <MESSAGE value="Cache" />
+    <MESSAGE value="gitgnore" />
+    <MESSAGE value="f" />
+    <MESSAGE value="Fix cache" />
+    <MESSAGE value="Fix bugs" />
+    <MESSAGE value="Changed the concept of adding a movie to the list" />
+    <MESSAGE value="Pip packege" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pip packege" />
+  </component>
+</project>

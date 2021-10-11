@@ -1,0 +1,131 @@
+{% extends 'index.html' %}
+{%load static%}
+{%block title%}{{film.title}}{% endblock title %}
+
+
+{% block content %}
+<!--Main information-->
+<div class="container mt-3 rounded border border-light text-white bg-dark">
+    <div class="row">
+        <!--Image-->
+        <div class="col-lg-5 col-sm-6 my-3">
+            <img src="{{film.poster_url}}" class="img-fluid rounded d-block mx-auto border border-warning" width="400"
+                 height="400" alt="{% static 'main/img/sad.png' %}">
+        </div>
+        <!--Info-->
+        <div class="my-3 col-lg-7 col-sm-6">
+            <p class="h3">{{film.title}}</p>
+            <hr>
+            <!--Жанры-->
+            <div class="container-fluid text-info fs-5">Жанры:
+                <b class="text-light">
+                    {%for gr in film.genre.all%}
+                    <small class="mx-auto my-auto border border-info rounded-3">{{gr}}</small>
+                    {%endfor%}
+                </b>
+            </div>
+            <hr>
+            <!--Data-->
+            <div class="container-fluid text-info fs-5">Release date:
+                <b class="text-light">{{film.year}}</b>
+            </div>
+            <hr>
+            <!--Country-->
+            <div class="container-fluid text-info fs-5">Country:
+                <b class="text-light">
+                    {%for ct in film.country.all%}
+                    <small class="mx-auto my-auto border border-info rounded-3">{{ct}}</small>
+                    {%endfor%}
+                </b>
+            </div>
+            <hr>
+            <!--Premiere-->
+            <div class="container-fluid text-info fs-5">Time:
+                <time class="text-light">{{film.premiere}}</time>
+            </div>
+            <hr>
+            <div class="container-fluid text-info fs-5">Raiting:
+                <i class="text-white">{{raiting.res}}</i>
+            </div>
+            <hr>
+            <div class="container-fluid text-info fs-5">Добавить в список:
+                <form action="{%url 'main:change_list' film.id%}" method="post" name="change_list">
+                    {%csrf_token%}
+                    {{list_form}}
+                    <button type="submit" class="btn btn-success">Добавить</button>
+                </form>
+            </div>
+
+            <!--Series-->
+            {%if film_series%}
+            <div class="container my-3">
+                <p class="fs-5 text-center text-white">Из той же серии</p>
+                <div class="row row-cols-sm-3 row-cols-md-3 row-cols-lg-5 rounded mb-3">
+                    {%for series in film_series %}
+                    <a class="h-100 border rounded rounded-3 border-light bg-dark col text-center mx-2"
+                       href="{%url 'main:movie_detail' series.slug%}">
+                        <img class="border border-primary mt-2" width="80%" height="90%" src="{{series.poster_url}}"
+                             alt="poster">
+                        <p class="text-white">{{series.title}}</p>
+                    </a>
+                    {%endfor%}
+                </div>
+            </div>
+            {%endif%}
+            <hr>
+        </div>
+        <!--Description-->
+        <figure>
+            <blockquote class=" my-2 blockquote mx-3">
+                <p align="justify" class="text-wrap col-lg-12 col-sm-12">
+                    {{film.description|linebreaksbr}}</p>
+            </blockquote>
+            <figcaption class="blockquote-footer my-2">All content was taken from<cite title="Source Title">
+                Wikipedia</cite>
+            </figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--Comments-->
+<div class="container-fluid mt-3 col-8 rounded text-white ">
+    <!--All coments-->
+    <p class="text-center text-info fs-3"> КОММЕНТАРИИ: </p>
+    {%for f in film.filmusersinfo_set.all%}
+    {%if f.raiting != None%}
+    <div class="container border border-white my-2 mx-auto row ">
+        <div class="col-3 my-2 mx-auto text-center">
+            <a href="{% url 'users:profile' f.users_info.pk%}">
+                <img width="100%" height="auto" class="border border-info rounded-circle"
+                     src="{{f.users_info.photo.url}}">
+                <h5 class="text-info mx-auto text-center ">{{f.users_info.username|upper}}</h5>
+            </a>
+            <p class="text-warning fs-5">Оценка: {{f.raiting}} из 5</p>
+        </div>
+        <p class="col-9 text-warning fs-5">{{f.comment}}</p>
+    </div>
+    {%endif%}
+    {%endfor%}
+    <!--Add comment-->
+    {%if user.is_authenticated%}
+    <form action="{%url 'main:comment_film' film.id%}" method="post" class="my-4 ps-3 border border-info">
+        {% csrf_token %}
+        <div class="col-12 row">
+            <p class="text-info fs-3"> Добавить/Изменить комментарий: </p>
+            {%for f in form %}
+            <div class="col-12">
+                <p><label class="form-label text-warning fs-4"
+                          for="{{f.id_for_lable}}"><br>{{f.label}}</label><br>{{f}}</p>
+                <div class="text-danger">{{f.errors}}</div>
+            </div>
+            {%endfor%}
+        </div>
+        <button type="submit" class="mb-5 btn btn-success"> Отправить</button>
+    </form>
+    {%else%}
+    <div class="container rounded text-white text-center my-2">
+        <h5 class="text-info"> Комментарии могут оставлять только зарегестрированные пользователи </h5>
+    </div>
+    {%endif%}
+</div>
+{% endblock content %}
