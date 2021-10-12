@@ -4,6 +4,7 @@ from django.db import models
 from django.urls import reverse
 import datetime as date
 
+
 class MyUser(AbstractUser):
     photo = models.ImageField('Фотография', upload_to='users_photo', blank=True, default='users/unknow.png')
     birth_date = models.DateField('День Рождения', default='2002-09-20', blank=True, validators=[MinValueValidator(limit_value=date.date(1900, 1, 1)), MaxValueValidator(limit_value=date.date.today)])

@@ -48,6 +48,7 @@
                 <i class="text-white">{{raiting.res}}</i>
             </div>
             <hr>
+            {% if user.is_authenticated %}
             <div class="container-fluid text-info fs-5">Добавить в список:
                 <form action="{%url 'main:change_list' film.id%}" method="post" name="change_list">
                     {%csrf_token%}
@@ -55,7 +56,7 @@
                     <button type="submit" class="btn btn-success">Добавить</button>
                 </form>
             </div>
-
+            {% endif %}
             <!--Series-->
             {%if film_series%}
             <div class="container my-3">

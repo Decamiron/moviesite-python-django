@@ -82,7 +82,7 @@ class CommentFilm(CreateView):
 
 class Search(FilmHome, ListView):
     def get_queryset(self):
-        return Film.objects.filter(title__icontains=self.request.GET.get("film_search"))
+        return Film.objects.filter(title__icontains=self.request.GET.get("film_search").capitalize())
 
 
 class GenreFilter(GenreCountry, ListView):
