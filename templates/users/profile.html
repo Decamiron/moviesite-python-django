@@ -39,8 +39,12 @@
                         <label>
                             {%csrf_token%}
                             Публичный список:
-                              <input name="published_list" value="{{user.is_published}}" type="submit"  class="btn btn-success my-3">
-                            {{user.published_list}}
+                            {% if user.is_published %}
+                              <input name="published_list" value="Yes" type="submit" class="btn btn-success my-3" style="height: 1px">
+                            {% else %}
+                              <input name="published_list" value="No" type="submit" class="btn btn btn-danger my-3">
+                            {% endif %}
+                                {{user.published_list}}
                         </label>
                     </form>
                     {%endif%}
