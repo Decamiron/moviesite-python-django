@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.db import models
 from django.urls import reverse
 
@@ -45,8 +46,7 @@ class Film(models.Model):
     title = models.CharField("Название", max_length=100)
     slug = models.SlugField("URL", max_length=100, unique=True, db_index=True)
     description = models.TextField("Описание")
-    poster_url = models.URLField("Картинка в интернете",
-                                 default="http://didaktor.ru/wp-content/uploads/2011/03/vopros-300x300.jpg")
+    poster_url = models.URLField("Картинка в интернете", default=settings.DEFAULT_IMAGE)
     year = models.PositiveSmallIntegerField("Дата выхода", default=2000)
     country = models.ManyToManyField("Country", verbose_name='страны')
     genre = models.ManyToManyField('Genre', verbose_name='жанры')
