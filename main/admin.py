@@ -1,44 +1,28 @@
 from django.contrib import admin
-from wagtail.contrib.modeladmin.options import ModelAdminGroup, ModelAdmin, modeladmin_register
-
 from main.models import Film, Genre, Series, Country
 
 
-class FilmAdmin(ModelAdmin):
-    model = Film
+class FilmAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'poster_url', 'year')
     list_display_links = ('title', 'id')
     search_fields = ('title', 'description')
-    list_filter = ('premiere_date', 'genre')
-    # prepopulated_fields = {"slug": ("title",)}
+    list_filter = ('premiere', 'genre')
+    prepopulated_fields = {"slug": ("title",)}
 
 
-class GenreAdmin(ModelAdmin):
-    model = Genre
-    # prepopulated_fields = {"slug": ("title",)}
-    search_fields = ('title',)
-    list_filter = ('title',)
+class GenreAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"slug": ("name",)}
+    search_fields = ('name',)
+    list_filter = ('name',)
 
 
-class CountryAdmin(ModelAdmin):
-    model = Country
-    # prepopulated_fields = {"slug": ("title",)}
-    search_fields = ('title',)
-    list_filter = ('title',)
+class CountryAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"slug": ("name",)}
+    search_fields = ('name',)
+    list_filter = ('name',)
 
 
-class SeriesAdmin(ModelAdmin):
-    model = Series
-    # prepopulated_fields = {"slug": ("title",)}
-    search_fields = ('title',)
-    list_filter = ('title',)
-
-
-class FilmInfo(ModelAdminGroup):
-    menu_label = 'Фильмы'
-    menu_icon = 'folder-open-inverse'  # change as required
-    menu_order = 100  # will put in 3rd place (000 being 1st, 100 2nd)
-    items = (FilmAdmin, GenreAdmin, CountryAdmin, SeriesAdmin)
-
-
-modeladmin_register(FilmInfo)
+admin.site.register(Film, FilmAdmin)
+admin.site.register(Genre, GenreAdmin)
+admin.site.register(Series)
+admin.site.register(Country, CountryAdmin)

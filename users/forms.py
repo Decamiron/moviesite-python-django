@@ -28,7 +28,7 @@ class RegisterUserForm(UserCreationForm):
 class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = MyUser
-        fields = ('username', 'password', 'photo', 'birth_date', 'age', 'bio')
+        fields = ('username', 'password', 'photo', 'birth_date', 'age', 'about_user')
 
 
 class LoginForm(AuthenticationForm):
