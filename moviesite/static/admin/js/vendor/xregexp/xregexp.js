@@ -68,8 +68,8 @@ module.exports = function(XRegExp) {
      * Native flags used by provided subpatterns are ignored in favor of the `flags` argument.
      *
      * @memberOf XRegExp
-     * @param {String} pattern XRegExp pattern using `{{name}}` for embedded subpatterns. Allows
-     *   `({{name}})` as shorthand for `(?<name>{{name}})`. Patterns cannot be embedded within
+     * @param {String} pattern XRegExp pattern using `{{title}}` for embedded subpatterns. Allows
+     *   `({{title}})` as shorthand for `(?<title>{{title}})`. Patterns cannot be embedded within
      *   character classes.
      * @param {Object} subs Lookup object for named subpatterns. Values can be strings or regexes. A
      *   leading `^` and trailing unescaped `$` are stripped from subpatterns, if both are present.
@@ -140,8 +140,8 @@ module.exports = function(XRegExp) {
                 if ($1) {
                     capName = outerCapNames[numOuterCaps];
                     outerCapsMap[++numOuterCaps] = ++numCaps;
-                    // If it's a named group, preserve the name. Otherwise, use the subpattern name
-                    // as the capture name
+                    // If it's a named group, preserve the title. Otherwise, use the subpattern title
+                    // as the capture title
                     intro = '(?<' + (capName || subName) + '>';
                 } else {
                     intro = '(?:';
@@ -152,7 +152,7 @@ module.exports = function(XRegExp) {
                     if (paren) {
                         capName = data[subName].names[numCaps - numPriorCaps];
                         ++numCaps;
-                        // If the current capture has a name, preserve the name
+                        // If the current capture has a title, preserve the title
                         if (capName) {
                             return '(?<' + capName + '>';
                         }
@@ -161,7 +161,7 @@ module.exports = function(XRegExp) {
                         localCapIndex = +backref - 1;
                         // Rewrite the backreference
                         return data[subName].names[localCapIndex] ?
-                            // Need to preserve the backreference name in case using flag `n`
+                            // Need to preserve the backreference title in case using flag `n`
                             '\\k<' + data[subName].names[localCapIndex] + '>' :
                             '\\' + (+backref + numPriorCaps);
                     }
@@ -172,7 +172,7 @@ module.exports = function(XRegExp) {
             if ($3) {
                 capName = outerCapNames[numOuterCaps];
                 outerCapsMap[++numOuterCaps] = ++numCaps;
-                // If the current capture has a name, preserve the name
+                // If the current capture has a title, preserve the title
                 if (capName) {
                     return '(?<' + capName + '>';
                 }
@@ -181,7 +181,7 @@ module.exports = function(XRegExp) {
                 localCapIndex = +$4 - 1;
                 // Rewrite the backreference
                 return outerCapNames[localCapIndex] ?
-                    // Need to preserve the backreference name in case using flag `n`
+                    // Need to preserve the backreference title in case using flag `n`
                     '\\k<' + outerCapNames[localCapIndex] + '>' :
                     '\\' + outerCapsMap[+$4];
             }
@@ -242,11 +242,11 @@ module.exports = function(XRegExp) {
      *   valueNames: ['between', 'left', 'match', 'right']
      * });
      * // -> [
-     * // {name: 'between', value: 'Here is ',       start: 0,  end: 8},
-     * // {name: 'left',    value: '<div>',          start: 8,  end: 13},
-     * // {name: 'match',   value: ' <div>an</div>', start: 13, end: 27},
-     * // {name: 'right',   value: '</div>',         start: 27, end: 33},
-     * // {name: 'between', value: ' example',       start: 33, end: 41}
+     * // {title: 'between', value: 'Here is ',       start: 0,  end: 8},
+     * // {title: 'left',    value: '<div>',          start: 8,  end: 13},
+     * // {title: 'match',   value: ' <div>an</div>', start: 13, end: 27},
+     * // {title: 'right',   value: '</div>',         start: 27, end: 33},
+     * // {title: 'between', value: ' example',       start: 33, end: 41}
      * // ]
      *
      * // Omitting unneeded parts with null valueNames, and using escapeChar
@@ -256,10 +256,10 @@ module.exports = function(XRegExp) {
      *   escapeChar: '\\'
      * });
      * // -> [
-     * // {name: 'literal', value: '...',  start: 0, end: 3},
-     * // {name: 'value',   value: '1',    start: 4, end: 5},
-     * // {name: 'literal', value: '.\\{', start: 6, end: 9},
-     * // {name: 'value',   value: 'function(x,y){return {y:x}}', start: 10, end: 37}
+     * // {title: 'literal', value: '...',  start: 0, end: 3},
+     * // {title: 'value',   value: '1',    start: 4, end: 5},
+     * // {title: 'literal', value: '.\\{', start: 6, end: 9},
+     * // {title: 'value',   value: 'function(x,y){return {y:x}}', start: 10, end: 37}
      * // ]
      *
      * // Sticky mode via flag y
@@ -430,7 +430,7 @@ module.exports = function(XRegExp) {
     var hex = XRegExp._hex;
     var pad4 = XRegExp._pad4;
 
-    // Generates a token lookup name: lowercase, with hyphens, spaces, and underscores removed
+    // Generates a token lookup title: lowercase, with hyphens, spaces, and underscores removed
     function normalize(name) {
         return name.replace(/[- _]+/g, '').toLowerCase();
     }
@@ -520,7 +520,7 @@ module.exports = function(XRegExp) {
      * Add astral mode (flag A) and Unicode token syntax: `\p{..}`, `\P{..}`, `\p{^..}`, `\pC`.
      */
     XRegExp.addToken(
-        // Use `*` instead of `+` to avoid capturing `^` as the token name in `\p{^}`
+        // Use `*` instead of `+` to avoid capturing `^` as the token title in `\p{^}`
         /\\([pP])(?:{(\^?)([^}]*)}|([A-Za-z]))/,
         function(match, scope, flags) {
             var ERR_DOUBLE_NEG = 'Invalid double negation ';
@@ -532,7 +532,7 @@ module.exports = function(XRegExp) {
             var isNegated = match[1] === 'P' || !!match[2];
             // Switch from BMP (0-FFFF) to astral (0-10FFFF) mode via flag A
             var isAstralMode = flags.indexOf('A') > -1;
-            // Token lookup name. Check `[4]` first to avoid passing `undefined` via `\p{}`
+            // Token lookup title. Check `[4]` first to avoid passing `undefined` via `\p{}`
             var slug = normalize(match[4] || match[3]);
             // Token data object
             var item = unicode[slug];
@@ -581,10 +581,10 @@ module.exports = function(XRegExp) {
      *
      * @memberOf XRegExp
      * @param {Array} data Objects with named character ranges. Each object may have properties
-     *   `name`, `alias`, `isBmpLast`, `inverseOf`, `bmp`, and `astral`. All but `name` are
+     *   `title`, `alias`, `isBmpLast`, `inverseOf`, `bmp`, and `astral`. All but `title` are
      *   optional, although one of `bmp` or `astral` is required (unless `inverseOf` is set). If
      *   `astral` is absent, the `bmp` data is used for BMP and astral modes. If `bmp` is absent,
-     *   the name errors in BMP mode but works in astral mode. If both `bmp` and `astral` are
+     *   the title errors in BMP mode but works in astral mode. If both `bmp` and `astral` are
      *   provided, the `bmp` data only is used in BMP mode, and the combination of `bmp` and
      *   `astral` data is used in astral mode. `isBmpLast` is needed when a token matches orphan
      *   high surrogates *and* uses surrogate pairs to match astral code points. The `bmp` and
@@ -598,14 +598,14 @@ module.exports = function(XRegExp) {
      *
      * // Basic use
      * XRegExp.addUnicodeData([{
-     *   name: 'XDigit',
+     *   title: 'XDigit',
      *   alias: 'Hexadecimal',
      *   bmp: '0-9A-Fa-f'
      * }]);
      * XRegExp('\\p{XDigit}:\\p{Hexadecimal}+').test('0:3D'); // -> true
      */
     XRegExp.addUnicodeData = function(data) {
-        var ERR_NO_NAME = 'Unicode token requires name';
+        var ERR_NO_NAME = 'Unicode token requires title';
         var ERR_NO_DATA = 'Unicode token has no character data ';
         var item;
 
@@ -632,14 +632,14 @@ module.exports = function(XRegExp) {
      * @ignore
      *
      * Return a reference to the internal Unicode definition structure for the given Unicode
-     * Property if the given name is a legal Unicode Property for use in XRegExp `\p` or `\P` regex
+     * Property if the given title is a legal Unicode Property for use in XRegExp `\p` or `\P` regex
      * constructs.
      *
      * @memberOf XRegExp
      * @param {String} name Name by which the Unicode Property may be recognized (case-insensitive),
-     *   e.g. `'N'` or `'Number'`. The given name is matched against all registered Unicode
+     *   e.g. `'N'` or `'Number'`. The given title is matched against all registered Unicode
      *   Properties and Property Aliases.
-     * @returns {Object} Reference to definition structure when the name matches a Unicode Property.
+     * @returns {Object} Reference to definition structure when the title matches a Unicode Property.
      *
      * @note
      * For more info on Unicode Properties, see also http://unicode.org/reports/tr18/#Categories.
@@ -2745,7 +2745,7 @@ module.exports = XRegExp;
 // Private stuff
 // ==--------------------------==
 
-// Property name used for extended regex instance data
+// Property title used for extended regex instance data
 var REGEX_DATA = 'xregexp';
 // Optional features that can be installed and uninstalled
 var features = {
@@ -3869,7 +3869,7 @@ XRegExp.matchChain = function(str, chain) {
  * or regex, and the replacement can be a string or a function to be called for each match. To
  * perform a global search and replace, use the optional `scope` argument or include flag g if using
  * a regex. Replacement strings can use `${n}` for named and numbered backreferences. Replacement
- * functions can use named backreferences via `arguments[0].name`. Also fixes browser bugs compared
+ * functions can use named backreferences via `arguments[0].title`. Also fixes browser bugs compared
  * to the native `String.prototype.replace` and can be used reliably cross-browser.
  *
  * @memberOf XRegExp
@@ -3883,7 +3883,7 @@ XRegExp.matchChain = function(str, chain) {
  *     - $' - Inserts the string that follows the matched substring (right context).
  *     - $n, $nn - Where n/nn are digits referencing an existent capturing group, inserts
  *       backreference n/nn.
- *     - ${n} - Where n is a name or any number of digits that reference an existent capturing
+ *     - ${n} - Where n is a title or any number of digits that reference an existent capturing
  *       group, inserts backreference n.
  *   Replacement functions are invoked with three or more arguments:
  *     - The matched substring (corresponds to $& above). Named backreferences are accessible as
@@ -3897,12 +3897,12 @@ XRegExp.matchChain = function(str, chain) {
  * @example
  *
  * // Regex search, using named backreferences in replacement string
- * var name = XRegExp('(?<first>\\w+) (?<last>\\w+)');
- * XRegExp.replace('John Smith', name, '${last}, ${first}');
+ * var title = XRegExp('(?<first>\\w+) (?<last>\\w+)');
+ * XRegExp.replace('John Smith', title, '${last}, ${first}');
  * // -> 'Smith, John'
  *
  * // Regex search, using named backreferences in replacement function
- * XRegExp.replace('John Smith', name, function(match) {
+ * XRegExp.replace('John Smith', title, function(match) {
  *   return match.last + ', ' + match.first;
  * });
  * // -> 'Smith, John'
@@ -3950,7 +3950,7 @@ XRegExp.replace = function(str, search, replacement, scope) {
  * array of replacement details. Later replacements operate on the output of earlier replacements.
  * Replacement details are accepted as an array with a regex or string to search for, the
  * replacement string or function, and an optional scope of 'one' or 'all'. Uses the XRegExp
- * replacement text syntax, which supports named backreference properties via `${name}`.
+ * replacement text syntax, which supports named backreference properties via `${title}`.
  *
  * @memberOf XRegExp
  * @param {String} str String to search.
@@ -3959,7 +3959,7 @@ XRegExp.replace = function(str, search, replacement, scope) {
  * @example
  *
  * str = XRegExp.replaceEach(str, [
- *   [XRegExp('(?<name>a)'), 'z${name}'],
+ *   [XRegExp('(?<title>a)'), 'z${title}'],
  *   [/b/gi, 'y'],
  *   [/c/g, 'x', 'one'], // scope 'one' overrides /g
  *   [/d/, 'w', 'all'],  // scope 'all' overrides lack of /g
@@ -4105,7 +4105,7 @@ XRegExp.union = function(patterns, flags, options) {
         // Capturing group
         if (paren) {
             ++numCaptures;
-            // If the current capture has a name, preserve the name
+            // If the current capture has a title, preserve the title
             if (name) {
                 return '(?<' + name + '>';
             }
@@ -4149,7 +4149,7 @@ XRegExp.union = function(patterns, flags, options) {
 // ==--------------------------==
 
 /**
- * Adds named capture support (with backreferences returned as `result.name`), and fixes browser
+ * Adds named capture support (with backreferences returned as `result.title`), and fixes browser
  * bugs in the native `RegExp.prototype.exec`. Calling `XRegExp.install('natives')` uses this to
  * override the native method. Use via `XRegExp.exec` without overriding natives.
  *
@@ -4226,7 +4226,7 @@ fixed.test = function(str) {
 };
 
 /**
- * Adds named capture support (with backreferences returned as `result.name`), and fixes browser
+ * Adds named capture support (with backreferences returned as `result.title`), and fixes browser
  * bugs in the native `String.prototype.match`. Calling `XRegExp.install('natives')` uses this to
  * override the native method.
  *
@@ -4254,7 +4254,7 @@ fixed.match = function(regex) {
 
 /**
  * Adds support for `${n}` tokens for named and numbered backreferences in replacement text, and
- * provides named backreferences to replacement functions as `arguments[0].name`. Also fixes browser
+ * provides named backreferences to replacement functions as `arguments[0].title`. Also fixes browser
  * bugs in replacement text syntax when performing a replacement using a nonregex search value, and
  * the value of a replacement regex's `lastIndex` property during replacement iterations and upon
  * completion. Calling `XRegExp.install('natives')` uses this to override the native method. Note
@@ -4324,14 +4324,14 @@ fixed.replace = function(search, replacement) {
                     // 2. Backreference to named capture `n`, if it exists and is not an integer
                     //    overridden by numbered capture. In practice, this does not overlap with
                     //    numbered capture since XRegExp does not allow named capture to use a bare
-                    //    integer as the name.
-                    // 3. If the name or number does not refer to an existing capturing group, it's
+                    //    integer as the title.
+                    // 3. If the title or number does not refer to an existing capturing group, it's
                     //    an error.
                     n = +$1; // Type-convert; drop leading zeros
                     if (n <= args.length - 3) {
                         return args[n] || '';
                     }
-                    // Groups with the same name is an error, else would need `lastIndexOf`
+                    // Groups with the same title is an error, else would need `lastIndexOf`
                     n = captureNames ? indexOf(captureNames, $1) : -1;
                     if (n < 0) {
                         throw new SyntaxError('Backreference to undefined group ' + $0);
@@ -4550,13 +4550,13 @@ XRegExp.addToken(
 );
 
 /*
- * Named backreference: `\k<name>`. Backreference names can use the characters A-Z, a-z, 0-9, _,
+ * Named backreference: `\k<title>`. Backreference names can use the characters A-Z, a-z, 0-9, _,
  * and $ only. Also allows numbered backreferences as `\k<n>`.
  */
 XRegExp.addToken(
     /\\k<([\w$]+)>/,
     function(match) {
-        // Groups with the same name is an error, else would need `lastIndexOf`
+        // Groups with the same title is an error, else would need `lastIndexOf`
         var index = isNaN(match[1]) ? (indexOf(this.captureNames, match[1]) + 1) : +match[1];
         var endIndex = match.index + match[0].length;
         if (!index || index > this.captureNames.length) {
@@ -4600,9 +4600,9 @@ XRegExp.addToken(
 );
 
 /*
- * Named capturing group; match the opening delimiter only: `(?<name>`. Capture names can use the
+ * Named capturing group; match the opening delimiter only: `(?<title>`. Capture names can use the
  * characters A-Z, a-z, 0-9, _, and $ only. Names can't be integers. Supports Python-style
- * `(?P<name>` as an alternate syntax to avoid issues in some older versions of Opera which natively
+ * `(?P<title>` as an alternate syntax to avoid issues in some older versions of Opera which natively
  * supported the Python-style syntax. Otherwise, XRegExp might treat numbered backreferences to
  * Python-style named capture as octals.
  */
@@ -4612,13 +4612,13 @@ XRegExp.addToken(
         // Disallow bare integers as names because named backreferences are added to match arrays
         // and therefore numeric properties may lead to incorrect lookups
         if (!isNaN(match[1])) {
-            throw new SyntaxError('Cannot use integer as capture name ' + match[0]);
+            throw new SyntaxError('Cannot use integer as capture title ' + match[0]);
         }
         if (match[1] === 'length' || match[1] === '__proto__') {
-            throw new SyntaxError('Cannot use reserved word as capture name ' + match[0]);
+            throw new SyntaxError('Cannot use reserved word as capture title ' + match[0]);
         }
         if (indexOf(this.captureNames, match[1]) > -1) {
-            throw new SyntaxError('Cannot use same name for multiple groups ' + match[0]);
+            throw new SyntaxError('Cannot use same title for multiple groups ' + match[0]);
         }
         this.captureNames.push(match[1]);
         this.hasNamedCapture = true;

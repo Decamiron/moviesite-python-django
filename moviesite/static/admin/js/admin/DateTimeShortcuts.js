@@ -19,11 +19,11 @@
         },
         dismissClockFunc: [],
         dismissCalendarFunc: [],
-        calendarDivName1: 'calendarbox', // name of calendar <div> that gets toggled
-        calendarDivName2: 'calendarin', // name of <div> that contains calendar
-        calendarLinkName: 'calendarlink', // name of the link that is used to toggle
-        clockDivName: 'clockbox', // name of clock <div> that gets toggled
-        clockLinkName: 'clocklink', // name of the link that is used to toggle
+        calendarDivName1: 'calendarbox', // title of calendar <div> that gets toggled
+        calendarDivName2: 'calendarin', // title of <div> that contains calendar
+        calendarLinkName: 'calendarlink', // title of the link that is used to toggle
+        clockDivName: 'clockbox', // title of clock <div> that gets toggled
+        clockLinkName: 'clocklink', // title of the link that is used to toggle
         shortCutsClass: 'datetimeshortcuts', // class of the clock and cal shortcuts
         timezoneWarningClass: 'timezonewarning', // class of the warning for timezone mismatch
         timezoneOffset: 0,
@@ -160,8 +160,8 @@
             const time_list = quickElement('ul', clock_box);
             time_list.className = 'timelist';
             // The list of choices can be overridden in JavaScript like this:
-            // DateTimeShortcuts.clockHours.name = [['3 a.m.', 3]];
-            // where name is the name attribute of the <input>.
+            // DateTimeShortcuts.clockHours.title = [['3 a.m.', 3]];
+            // where title is the title attribute of the <input>.
             const name = typeof DateTimeShortcuts.clockHours[inp.name] === 'undefined' ? 'default_' : inp.name;
             DateTimeShortcuts.clockHours[name].forEach(function(element) {
                 const time_link = quickElement('a', quickElement('li', time_list), gettext(element[0]), 'href', '#');

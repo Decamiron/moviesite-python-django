@@ -44,7 +44,7 @@ class MovieDetail(DetailView):
         context['film_series'] = Film.objects.filter(series_id=context['film'].series_id).exclude(id=context['film'].id)
         context['form'] = Comments
         context['list_form'] = FilmListView
-        context['raiting'] = users.models.FilmUsersInfo.objects.filter(film_info_id=context['film'].pk).aggregate(
+        context['raiting'] = users.models.FilmUsersInfo.objects.filter(film_id=context['film'].pk).aggregate(
             res=Avg('raiting'))
         return context
 
@@ -52,10 +52,10 @@ class MovieDetail(DetailView):
 def change_list(request, id):
     print('ChangeList')
     try:
-        a = users.models.FilmUsersInfo.objects.get(users_info_id=request.user.id, film_info_id=id)
+        a = users.models.FilmUsersInfo.objects.get(user_id=request.user.id, film_id=id)
         a.series = request.POST['series']
     except:
-        a = users.models.FilmUsersInfo(series=request.POST['series'], users_info_id=request.user.id, film_info_id=id)
+        a = users.models.FilmUsersInfo(series=request.POST['series'], user_id=request.user.id, film_id=id)
     finally:
         a.save()
     return redirect('main:index')
@@ -70,12 +70,17 @@ class CommentFilm(CreateView):
     def post(self, request, pk):
         user = auth.get_user(request)
         try:
-            info = users.models.FilmUsersInfo.objects.get(film_info_id=pk, users_info_id=user.pk)
+            info = users.models.FilmUsersInfo.objects.get(film_id=pk, user_id=user.pk)
             info.raiting = request.POST['raiting']
             info.comment = request.POST['comment']
             info.save()
         except:
-            users.models.FilmUsersInfo(raiting=request.POST['raiting'], comment=request.POST['comment'], film_info_id=pk, users_info_id=user.pk).save()
+            users.models.FilmUsersInfo(
+                raiting=request.POST['raiting'],
+                comment=request.POST['comment'],
+                film_id=pk,
+                user_id=user.pk
+            ).save()
 
         return redirect('main:index')
 

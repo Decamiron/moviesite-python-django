@@ -159,7 +159,7 @@
                     <select multiple name="genre" size="7"
                             class="border border-2 align-self-start bootstrap-select bg-dark mx-auto text-center text-white">
                         {% for genre in view.get_genres %}
-                        <option name="{{genre.name}}" value="{{genre.id}}">{{genre}}</option>
+                        <option name="{{genre.title}}" value="{{genre.id}}">{{genre}}</option>
                         {%endfor%}
                     </select>
                 </label>
@@ -173,7 +173,7 @@
                     <select multiple class="border border-2 bootstrap-select bg-dark mx-auto text-center text-white"  size="7"
                             name="country">
                         {% for country in view.get_countrys %}
-                        <option value="{{country.id}}">{{country.name}}</option>
+                        <option value="{{country.id}}">{{country.title}}</option>
                         {%endfor%}
                     </select>
                 </label>
@@ -182,10 +182,7 @@
     </div>
 </form>
 {%endcache%}
-<<<<<<< HEAD
-=======
 
->>>>>>> github/master
 <!--Films -->
 <main class="container">
     <div class="row row-cols-3 ">

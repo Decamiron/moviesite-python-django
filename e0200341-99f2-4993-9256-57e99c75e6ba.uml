@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>e0200341-99f2-4993-9256-57e99c75e6ba</OriginalElement>
+  <nodes>
+    <node x="3031.943234767026" y="2001.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_grouppagepermission</node>
+    <node x="4370.21466547192" y="2023.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflowpage</node>
+    <node x="5131.46466547192" y="756.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page</node>
+    <node x="4177.867831541219" y="1601.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pagesubscription</node>
+    <node x="5930.068234767026" y="525.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_film_country</node>
+    <node x="2940.0" y="2224.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.sqlite_sequence</node>
+    <node x="743.1099014336924" y="2012.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser_groups</node>
+    <node x="1688.0" y="2224.0">e0200341-99f2-4993-9256-57e99c75e6ba.VIRTUAL TABLE:main.wagtailsearch_indexentry_fts</node>
+    <node x="465.0" y="2224.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.sqlite_master</node>
+    <node x="3997.7708333333335" y="525.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.taggit_tag</node>
+    <node x="3747.130734767026" y="1020.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.taggit_taggeditem</node>
+    <node x="2301.4583333333335" y="2001.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflowtask</node>
+    <node x="2658.818234767026" y="1020.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_task</node>
+    <node x="1482.0" y="2224.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.django_session</node>
+    <node x="593.6594982078855" y="525.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtaildocs_uploadeddocument</node>
+    <node x="4629.068234767026" y="1601.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pageviewrestriction</node>
+    <node x="2626.0" y="2224.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailsearch_indexentry_fts_data</node>
+    <node x="6308.068234767026" y="525.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_film_genre</node>
+    <node x="2547.068234767026" y="1634.5">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_groupapprovaltask</node>
+    <node x="604.5344982078855" y="1009.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_collection</node>
+    <node x="265.75" y="1491.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailimages_image</node>
+    <node x="5343.068234767026" y="1590.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailsearch_editorspick</node>
+    <node x="869.6594982078855" y="525.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailimages_uploadedimage</node>
+    <node x="6393.068234767026" y="132.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_genre</node>
+    <node x="1179.7083333333335" y="1601.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_permission</node>
+    <node x="971.0" y="2224.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.django_migrations</node>
+    <node x="4524.922401433692" y="459.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailusers_userprofile</node>
+    <node x="827.9583333333335" y="1601.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_collectionviewrestriction</node>
+    <node x="3320.943234767026" y="1968.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflowstate</node>
+    <node x="4905.068234767026" y="1601.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailforms_formsubmission</node>
+    <node x="513.75" y="1557.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtaildocs_document</node>
+    <node x="5784.068234767026" y="514.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_series</node>
+    <node x="3388.3333333333335" y="976.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.django_admin_log</node>
+    <node x="3128.0" y="2224.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailadmin_admin</node>
+    <node x="1857.9432347670258" y="932.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pagelogentry</node>
+    <node x="5597.068234767026" y="492.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_filmusersinfo</node>
+    <node x="1830.5682347670258" y="1623.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_group</node>
+    <node x="0.0" y="1968.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailimages_rendition</node>
+    <node x="6135.943234767026" y="143.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_country</node>
+    <node x="4698.96466547192" y="1979.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_commentreply</node>
+    <node x="2300.0" y="2224.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailsearch_indexentry_fts_config</node>
+    <node x="5586.068234767026" y="1601.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailsearch_querydailyhits</node>
+    <node x="5780.693234767026" y="99.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_film</node>
+    <node x="5165.068234767026" y="1579.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_site</node>
+    <node x="3599.3333333333335" y="1612.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflow</node>
+    <node x="2903.630734767026" y="525.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.django_content_type</node>
+    <node x="3820.3333333333335" y="1524.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_comment</node>
+    <node x="236.0" y="2224.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.captcha_captchastore</node>
+    <node x="2946.867831541219" y="1535.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_taskstate</node>
+    <node x="1973.9432347670258" y="2012.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_groupapprovaltask_groups</node>
+    <node x="1070.9432347670258" y="2001.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_groupcollectionpermission</node>
+    <node x="476.10990143369236" y="2012.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser_user_permissions</node>
+    <node x="5600.568234767026" y="1042.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailsearch_query</node>
+    <node x="1178.0" y="2224.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailsearch_indexentry_fts_idx</node>
+    <node x="6103.068234767026" y="536.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_locale</node>
+    <node x="5416.943234767026" y="1946.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailredirects_redirect</node>
+    <node x="3558.943234767026" y="2012.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pageviewrestriction_groups</node>
+    <node x="1753.9432347670258" y="2012.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_group_permissions</node>
+    <node x="3147.3333333333335" y="943.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_modellogentry</node>
+    <node x="635.0" y="2224.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailsearch_indexentry_fts_content</node>
+    <node x="4791.922401433692" y="481.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pagerevision</node>
+    <node x="1966.0" y="2224.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailsearch_indexentry_fts_docsize</node>
+    <node x="3518.318234767026" y="0.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser</node>
+    <node x="2918.3333333333335" y="987.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailsearch_indexentry</node>
+    <node x="1392.9432347670258" y="2012.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_collectionviewrestriction_groups</node>
+    <node x="0.0" y="2224.0">e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailembeds_embed</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_comment" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pagerevision" relationship="REFERENCES">
+      <point x="23.125" y="-138.5" />
+      <point x="3935.9583333333335" y="1459.0" />
+      <point x="4477.020833333334" y="1459.0" />
+      <point x="4477.020833333334" y="724.0" />
+      <point x="4871.047401433692" y="724.0" />
+      <point x="-26.375" y="94.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflowstate" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_taskstate" relationship="REFERENCES">
+      <point x="-43.59999999999991" y="-94.5" />
+      <point x="3386.343234767026" y="1855.0" />
+      <point x="3084.117831541219" y="1855.0" />
+      <point x="45.75" y="127.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_taskstate" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflowstate" relationship="REFERENCES">
+      <point x="-45.75" y="127.5" />
+      <point x="2992.617831541219" y="1865.0" />
+      <point x="3342.743234767026" y="1865.0" />
+      <point x="-87.19999999999982" y="-94.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailimages_rendition" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailimages_image" relationship="REFERENCES">
+      <point x="0.0" y="-94.5" />
+      <point x="101.0" y="1925.0" />
+      <point x="379.75" y="1925.0" />
+      <point x="0.0" y="171.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.django_admin_log" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="47.5" y="-105.5" />
+      <point x="3530.8333333333335" y="724.0" />
+      <point x="3828.380734767026" y="724.0" />
+      <point x="3828.380734767026" y="438.0" />
+      <point x="4648.422401433692" y="438.0" />
+      <point x="4648.422401433692" y="408.0" />
+      <point x="3631.755734767026" y="408.0" />
+      <point x="30.9375" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_modellogentry" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.django_content_type" relationship="REFERENCES">
+      <point x="0.0" y="-138.5" />
+      <point x="3257.8333333333335" y="734.0" />
+      <point x="2992.630734767026" y="734.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_groupcollectionpermission" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_permission" relationship="REFERENCES">
+      <point x="0.0" y="-61.5" />
+      <point x="1221.9432347670258" y="1925.0" />
+      <point x="1260.7083333333335" y="1925.0" />
+      <point x="0.0" y="61.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="18.91666666666697" y="-325.5" />
+      <point x="5263.881332138587" y="714.0" />
+      <point x="5586.568234767026" y="714.0" />
+      <point x="5586.568234767026" y="428.0" />
+      <point x="3652.380734767026" y="428.0" />
+      <point x="51.5625" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_filmusersinfo" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_film" relationship="REFERENCES">
+      <point x="41.5" y="-83.5" />
+      <point x="5721.568234767026" y="438.0" />
+      <point x="5863.193234767026" y="438.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_permission" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.django_content_type" relationship="REFERENCES">
+      <point x="0.0" y="-61.5" />
+      <point x="1260.7083333333335" y="734.0" />
+      <point x="2992.630734767026" y="734.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pagesubscription" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="-59.5" y="-61.5" />
+      <point x="4237.367831541219" y="1439.0" />
+      <point x="3987.2708333333335" y="1439.0" />
+      <point x="3987.2708333333335" y="438.0" />
+      <point x="4648.422401433692" y="438.0" />
+      <point x="4648.422401433692" y="408.0" />
+      <point x="3631.755734767026" y="408.0" />
+      <point x="30.9375" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser_groups" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="-45.0" y="-50.5" />
+      <point x="788.1099014336924" y="1905.0" />
+      <point x="255.25" y="1905.0" />
+      <point x="255.25" y="438.0" />
+      <point x="157.9172640382276" y="438.0" />
+      <point x="157.9172640382276" y="428.0" />
+      <point x="3528.630734767026" y="428.0" />
+      <point x="-72.1875" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_groupapprovaltask" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_task" relationship="REFERENCES">
+      <point x="0.0" y="-28.0" />
+      <point x="2672.068234767026" y="1469.0" />
+      <point x="2699.318234767026" y="1469.0" />
+      <point x="-40.5" y="61.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_film_genre" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_film" relationship="REFERENCES">
+      <point x="-35.0" y="-50.5" />
+      <point x="6343.068234767026" y="438.0" />
+      <point x="5863.193234767026" y="438.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_grouppagepermission" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" relationship="REFERENCES">
+      <point x="67.25" y="-61.5" />
+      <point x="3233.693234767026" y="1875.0" />
+      <point x="4426.367831541219" y="1875.0" />
+      <point x="4426.367831541219" y="1469.0" />
+      <point x="4687.818234767026" y="1469.0" />
+      <point x="4687.818234767026" y="1459.0" />
+      <point x="5216.58966547192" y="1459.0" />
+      <point x="-28.375" y="325.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailsearch_querydailyhits" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailsearch_query" relationship="REFERENCES">
+      <point x="0.0" y="-61.5" />
+      <point x="5702.568234767026" y="1469.0" />
+      <point x="5688.068234767026" y="1469.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pagesubscription" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" relationship="REFERENCES">
+      <point x="59.5" y="-61.5" />
+      <point x="4356.367831541219" y="1469.0" />
+      <point x="4687.818234767026" y="1469.0" />
+      <point x="4687.818234767026" y="1459.0" />
+      <point x="5216.58966547192" y="1459.0" />
+      <point x="-28.375" y="325.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflowtask" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_task" relationship="REFERENCES">
+      <point x="-53.0" y="-61.5" />
+      <point x="2354.4583333333335" y="1895.0" />
+      <point x="2818.7083333333335" y="1895.0" />
+      <point x="2818.7083333333335" y="1439.0" />
+      <point x="2780.318234767026" y="1439.0" />
+      <point x="40.5" y="61.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pagelogentry" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.django_content_type" relationship="REFERENCES">
+      <point x="0.0" y="-149.5" />
+      <point x="1964.4432347670258" y="734.0" />
+      <point x="2992.630734767026" y="734.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailimages_image" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="-57.0" y="-171.5" />
+      <point x="322.75" y="438.0" />
+      <point x="774.1099014336924" y="438.0" />
+      <point x="774.1099014336924" y="418.0" />
+      <point x="3549.255734767026" y="418.0" />
+      <point x="-51.5625" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_taskstate" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pagerevision" relationship="REFERENCES">
+      <point x="68.625" y="-127.5" />
+      <point x="3106.992831541219" y="1449.0" />
+      <point x="4260.208333333334" y="1449.0" />
+      <point x="4260.208333333334" y="714.0" />
+      <point x="4818.297401433692" y="714.0" />
+      <point x="-79.125" y="94.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtaildocs_uploadeddocument" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="0.0" y="-50.5" />
+      <point x="721.6594982078855" y="438.0" />
+      <point x="774.1099014336924" y="438.0" />
+      <point x="774.1099014336924" y="418.0" />
+      <point x="3549.255734767026" y="418.0" />
+      <point x="-51.5625" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser_user_permissions" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_permission" relationship="REFERENCES">
+      <point x="61.75" y="-50.5" />
+      <point x="661.3599014336924" y="1925.0" />
+      <point x="1260.7083333333335" y="1925.0" />
+      <point x="0.0" y="61.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailredirects_redirect" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_site" relationship="REFERENCES">
+      <point x="-60.75" y="-116.5" />
+      <point x="5477.693234767026" y="1915.0" />
+      <point x="5244.068234767026" y="1915.0" />
+      <point x="0.0" y="83.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflowstate" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflow" relationship="REFERENCES">
+      <point x="43.59999999999991" y="-94.5" />
+      <point x="3473.5432347670258" y="1905.0" />
+      <point x="3691.3333333333335" y="1905.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_group_permissions" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_permission" relationship="REFERENCES">
+      <point x="-50.0" y="-50.5" />
+      <point x="1803.9432347670258" y="1925.0" />
+      <point x="1260.7083333333335" y="1925.0" />
+      <point x="0.0" y="61.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailimages_uploadedimage" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="0.0" y="-50.5" />
+      <point x="992.1594982078855" y="438.0" />
+      <point x="774.1099014336924" y="438.0" />
+      <point x="774.1099014336924" y="418.0" />
+      <point x="3549.255734767026" y="418.0" />
+      <point x="-51.5625" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_group_permissions" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_group" relationship="REFERENCES">
+      <point x="50.0" y="-50.5" />
+      <point x="1903.9432347670258" y="1915.0" />
+      <point x="1897.5682347670258" y="1915.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailusers_userprofile" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="0.0" y="-116.5" />
+      <point x="4648.422401433692" y="408.0" />
+      <point x="3631.755734767026" y="408.0" />
+      <point x="30.9375" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pageviewrestriction_groups" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_group" relationship="REFERENCES">
+      <point x="-77.0" y="-50.5" />
+      <point x="3635.943234767026" y="1915.0" />
+      <point x="1897.5682347670258" y="1915.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailforms_formsubmission" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" relationship="REFERENCES">
+      <point x="0.0" y="-61.5" />
+      <point x="5024.568234767026" y="1469.0" />
+      <point x="4687.818234767026" y="1469.0" />
+      <point x="4687.818234767026" y="1459.0" />
+      <point x="5216.58966547192" y="1459.0" />
+      <point x="-28.375" y="325.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_film_country" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_film" relationship="REFERENCES">
+      <point x="-38.25" y="-50.5" />
+      <point x="5968.318234767026" y="438.0" />
+      <point x="5863.193234767026" y="438.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_locale" relationship="REFERENCES">
+      <point x="94.58333333333303" y="-325.5" />
+      <point x="5339.547998805253" y="734.0" />
+      <point x="6195.568234767026" y="734.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_filmusersinfo" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="-41.5" y="-83.5" />
+      <point x="5638.568234767026" y="438.0" />
+      <point x="4648.422401433692" y="438.0" />
+      <point x="4648.422401433692" y="408.0" />
+      <point x="3631.755734767026" y="408.0" />
+      <point x="30.9375" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_commentreply" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_comment" relationship="REFERENCES">
+      <point x="-55.0" y="-83.5" />
+      <point x="4753.96466547192" y="1865.0" />
+      <point x="3912.8333333333335" y="1865.0" />
+      <point x="0.0" y="138.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailsearch_editorspick" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" relationship="REFERENCES">
+      <point x="-52.75" y="-72.5" />
+      <point x="5395.818234767026" y="1469.0" />
+      <point x="4687.818234767026" y="1469.0" />
+      <point x="4687.818234767026" y="1459.0" />
+      <point x="5216.58966547192" y="1459.0" />
+      <point x="-28.375" y="325.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflowpage" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" relationship="REFERENCES">
+      <point x="54.5" y="-39.5" />
+      <point x="4533.71466547192" y="1915.0" />
+      <point x="5154.568234767026" y="1915.0" />
+      <point x="5154.568234767026" y="1469.0" />
+      <point x="4687.818234767026" y="1469.0" />
+      <point x="4687.818234767026" y="1459.0" />
+      <point x="5216.58966547192" y="1459.0" />
+      <point x="-28.375" y="325.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_comment" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" relationship="REFERENCES">
+      <point x="69.375" y="-138.5" />
+      <point x="3982.2083333333335" y="1469.0" />
+      <point x="4687.818234767026" y="1469.0" />
+      <point x="4687.818234767026" y="1459.0" />
+      <point x="5216.58966547192" y="1459.0" />
+      <point x="-28.375" y="325.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" relationship="REFERENCES">
+      <point x="-85.125" y="325.5" />
+      <point x="5159.83966547192" y="1427.0" />
+      <point x="5111.46466547192" y="1427.0" />
+      <point x="5111.46466547192" y="1081.5" />
+      <point x="-113.5" y="0.0" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflowtask" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflow" relationship="REFERENCES">
+      <point x="53.0" y="-61.5" />
+      <point x="2460.4583333333335" y="1905.0" />
+      <point x="3691.3333333333335" y="1905.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pageviewrestriction" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" relationship="REFERENCES">
+      <point x="0.0" y="-61.5" />
+      <point x="4757.068234767026" y="1469.0" />
+      <point x="4687.818234767026" y="1469.0" />
+      <point x="4687.818234767026" y="1459.0" />
+      <point x="5216.58966547192" y="1459.0" />
+      <point x="-28.375" y="325.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_collectionviewrestriction_groups" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_collectionviewrestriction" relationship="REFERENCES">
+      <point x="-85.25" y="-50.5" />
+      <point x="1478.1932347670258" y="1885.0" />
+      <point x="971.9583333333335" y="1885.0" />
+      <point x="0.0" y="61.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtaildocs_document" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="-48.0" y="-105.5" />
+      <point x="561.75" y="438.0" />
+      <point x="774.1099014336924" y="438.0" />
+      <point x="774.1099014336924" y="418.0" />
+      <point x="3549.255734767026" y="418.0" />
+      <point x="-51.5625" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_groupcollectionpermission" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_collection" relationship="REFERENCES">
+      <point x="-100.66666666666674" y="-61.5" />
+      <point x="1121.2765681003589" y="1895.0" />
+      <point x="716.25" y="1895.0" />
+      <point x="716.25" y="1469.0" />
+      <point x="698.5344982078855" y="1469.0" />
+      <point x="0.0" y="72.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_collectionviewrestriction_groups" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_group" relationship="REFERENCES">
+      <point x="85.25" y="-50.5" />
+      <point x="1648.6932347670258" y="1915.0" />
+      <point x="1897.5682347670258" y="1915.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflowpage" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflow" relationship="REFERENCES">
+      <point x="-54.5" y="-39.5" />
+      <point x="4424.71466547192" y="1905.0" />
+      <point x="3691.3333333333335" y="1905.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_commentreply" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="55.0" y="-83.5" />
+      <point x="4863.96466547192" y="1925.0" />
+      <point x="5575.568234767026" y="1925.0" />
+      <point x="5575.568234767026" y="438.0" />
+      <point x="4648.422401433692" y="438.0" />
+      <point x="4648.422401433692" y="408.0" />
+      <point x="3631.755734767026" y="408.0" />
+      <point x="30.9375" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pageviewrestriction_groups" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pageviewrestriction" relationship="REFERENCES">
+      <point x="77.0" y="-50.5" />
+      <point x="3789.943234767026" y="1895.0" />
+      <point x="4757.068234767026" y="1895.0" />
+      <point x="0.0" y="61.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_taskstate" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_task" relationship="REFERENCES">
+      <point x="-22.875" y="-127.5" />
+      <point x="3015.492831541219" y="1449.0" />
+      <point x="2818.7083333333335" y="1449.0" />
+      <point x="2818.7083333333335" y="1439.0" />
+      <point x="2780.318234767026" y="1439.0" />
+      <point x="40.5" y="61.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_taskstate" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="-68.625" y="-127.5" />
+      <point x="2969.742831541219" y="1459.0" />
+      <point x="1125.1594982078855" y="1459.0" />
+      <point x="1125.1594982078855" y="438.0" />
+      <point x="3569.880734767026" y="438.0" />
+      <point x="-30.9375" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_groupapprovaltask_groups" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_groupapprovaltask" relationship="REFERENCES">
+      <point x="75.75" y="-50.5" />
+      <point x="2201.193234767026" y="1885.0" />
+      <point x="2672.068234767026" y="1885.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailsearch_indexentry" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.django_content_type" relationship="REFERENCES">
+      <point x="0.0" y="-94.5" />
+      <point x="3022.8333333333335" y="734.0" />
+      <point x="2992.630734767026" y="734.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflowstate" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="0.0" y="-94.5" />
+      <point x="3429.943234767026" y="1865.0" />
+      <point x="3588.8333333333335" y="1865.0" />
+      <point x="3588.8333333333335" y="438.0" />
+      <point x="3590.505734767026" y="438.0" />
+      <point x="-10.3125" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_site" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" relationship="REFERENCES">
+      <point x="0.0" y="-83.5" />
+      <point x="5244.068234767026" y="1459.0" />
+      <point x="5273.33966547192" y="1459.0" />
+      <point x="28.375" y="325.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_workflowstate" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" relationship="REFERENCES">
+      <point x="87.19999999999982" y="-94.5" />
+      <point x="3517.1432347670257" y="1885.0" />
+      <point x="4541.979764038228" y="1885.0" />
+      <point x="4541.979764038228" y="1469.0" />
+      <point x="4687.818234767026" y="1469.0" />
+      <point x="4687.818234767026" y="1459.0" />
+      <point x="5216.58966547192" y="1459.0" />
+      <point x="-28.375" y="325.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_series" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_film" relationship="REFERENCES">
+      <point x="0.0" y="-61.5" />
+      <point x="5847.068234767026" y="438.0" />
+      <point x="5863.193234767026" y="438.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_comment" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="-23.125" y="-138.5" />
+      <point x="3889.7083333333335" y="1439.0" />
+      <point x="3958.0833333333335" y="1439.0" />
+      <point x="3958.0833333333335" y="438.0" />
+      <point x="4648.422401433692" y="438.0" />
+      <point x="4648.422401433692" y="408.0" />
+      <point x="3631.755734767026" y="408.0" />
+      <point x="30.9375" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_film_country" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_country" relationship="REFERENCES">
+      <point x="38.25" y="-50.5" />
+      <point x="6044.818234767026" y="428.0" />
+      <point x="6198.943234767026" y="428.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.django_admin_log" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.django_content_type" relationship="REFERENCES">
+      <point x="-47.5" y="-105.5" />
+      <point x="3435.8333333333335" y="734.0" />
+      <point x="2992.630734767026" y="734.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.taggit_taggeditem" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.taggit_tag" relationship="REFERENCES">
+      <point x="40.5" y="-61.5" />
+      <point x="3868.630734767026" y="724.0" />
+      <point x="4064.7708333333335" y="724.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pagerevision" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" relationship="REFERENCES">
+      <point x="79.125" y="94.5" />
+      <point x="4976.547401433692" y="714.0" />
+      <point x="5226.047998805253" y="714.0" />
+      <point x="-18.91666666666697" y="-325.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailsearch_editorspick" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailsearch_query" relationship="REFERENCES">
+      <point x="52.75" y="-72.5" />
+      <point x="5501.318234767026" y="1469.0" />
+      <point x="5688.068234767026" y="1469.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pagerevision" relationship="REFERENCES">
+      <point x="-56.75" y="-325.5" />
+      <point x="5188.21466547192" y="724.0" />
+      <point x="4923.797401433692" y="724.0" />
+      <point x="26.375" y="94.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_collectionviewrestriction" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_collection" relationship="REFERENCES">
+      <point x="0.0" y="-61.5" />
+      <point x="971.9583333333335" y="1469.0" />
+      <point x="698.5344982078855" y="1469.0" />
+      <point x="0.0" y="72.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_groupapprovaltask_groups" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_group" relationship="REFERENCES">
+      <point x="-75.75" y="-50.5" />
+      <point x="2049.693234767026" y="1915.0" />
+      <point x="1897.5682347670258" y="1915.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_film_genre" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.film_genre" relationship="REFERENCES">
+      <point x="35.0" y="-50.5" />
+      <point x="6413.068234767026" y="438.0" />
+      <point x="6456.068234767026" y="438.0" />
+      <point x="0.0" y="61.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_groupcollectionpermission" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_group" relationship="REFERENCES">
+      <point x="100.66666666666674" y="-61.5" />
+      <point x="1322.6099014336926" y="1915.0" />
+      <point x="1897.5682347670258" y="1915.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailredirects_redirect" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" relationship="REFERENCES">
+      <point x="60.75" y="-116.5" />
+      <point x="5599.193234767026" y="1915.0" />
+      <point x="5564.568234767026" y="1915.0" />
+      <point x="5564.568234767026" y="1459.0" />
+      <point x="5330.08966547192" y="1459.0" />
+      <point x="85.125" y="325.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtaildocs_document" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_collection" relationship="REFERENCES">
+      <point x="48.0" y="-105.5" />
+      <point x="657.75" y="1469.0" />
+      <point x="698.5344982078855" y="1469.0" />
+      <point x="0.0" y="72.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.taggit_taggeditem" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.django_content_type" relationship="REFERENCES">
+      <point x="-40.5" y="-61.5" />
+      <point x="3787.630734767026" y="734.0" />
+      <point x="2992.630734767026" y="734.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_pagerevision" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="0.0" y="-94.5" />
+      <point x="4897.422401433692" y="438.0" />
+      <point x="4648.422401433692" y="438.0" />
+      <point x="4648.422401433692" y="408.0" />
+      <point x="3631.755734767026" y="408.0" />
+      <point x="30.9375" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser_groups" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_group" relationship="REFERENCES">
+      <point x="45.0" y="-50.5" />
+      <point x="878.1099014336924" y="1915.0" />
+      <point x="1897.5682347670258" y="1915.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_task" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.django_content_type" relationship="REFERENCES">
+      <point x="0.0" y="-61.5" />
+      <point x="2739.818234767026" y="734.0" />
+      <point x="2992.630734767026" y="734.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_taskstate" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.django_content_type" relationship="REFERENCES">
+      <point x="22.875" y="-127.5" />
+      <point x="3061.242831541219" y="1439.0" />
+      <point x="2907.8333333333335" y="1439.0" />
+      <point x="2907.8333333333335" y="734.0" />
+      <point x="2992.630734767026" y="734.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser_user_permissions" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.users_myuser" relationship="REFERENCES">
+      <point x="-61.75" y="-50.5" />
+      <point x="537.8599014336924" y="1915.0" />
+      <point x="125.125" y="1915.0" />
+      <point x="125.125" y="438.0" />
+      <point x="157.9172640382276" y="438.0" />
+      <point x="157.9172640382276" y="428.0" />
+      <point x="3528.630734767026" y="428.0" />
+      <point x="-72.1875" y="193.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_grouppagepermission" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.auth_group" relationship="REFERENCES">
+      <point x="-67.25" y="-61.5" />
+      <point x="3099.193234767026" y="1915.0" />
+      <point x="1897.5682347670258" y="1915.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.django_content_type" relationship="REFERENCES">
+      <point x="-94.58333333333303" y="-325.5" />
+      <point x="5150.381332138587" y="734.0" />
+      <point x="2992.630734767026" y="734.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailimages_image" target="e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_collection" relationship="REFERENCES">
+      <point x="57.0" y="-171.5" />
+      <point x="436.75" y="1469.0" />
+      <point x="698.5344982078855" y="1469.0" />
+      <point x="0.0" y="72.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.19525993883792045" showDependencies="false" x="3260.0" y="1283.5" />
+  <SelectedNodes>
+    <node>e0200341-99f2-4993-9256-57e99c75e6ba.TABLE:main.wagtailcore_page</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

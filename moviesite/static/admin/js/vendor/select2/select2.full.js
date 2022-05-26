@@ -67,12 +67,12 @@ var requirejs, require, define;
     }
 
     /**
-     * Given a relative module name, like ./something, normalize it to
-     * a real name that can be mapped to a path.
-     * @param {String} name the relative name
-     * @param {String} baseName a real name that the name arg is relative
+     * Given a relative module title, like ./something, normalize it to
+     * a real title that can be mapped to a path.
+     * @param {String} name the relative title
+     * @param {String} baseName a real title that the title arg is relative
      * to.
-     * @returns {String} normalized name
+     * @returns {String} normalized title
      */
     function normalize(name, baseName) {
         var nameParts, nameSegment, mapValue, foundMap, lastIndex,
@@ -97,7 +97,7 @@ var requirejs, require, define;
             // Starts with a '.' so need the baseName
             if (name[0].charAt(0) === '.' && baseParts) {
                 //Convert baseName to array, and lop off the last part,
-                //so that . matches that 'directory' and not name of the baseName's
+                //so that . matches that 'directory' and not title of the baseName's
                 //module. For instance, baseName of 'one/two/three', maps to
                 //'one/two/three.js', but we want the directory, 'one/two' for
                 //this normalization.
@@ -144,11 +144,11 @@ var requirejs, require, define;
                         mapValue = map[baseParts.slice(0, j).join('/')];
 
                         //baseName segment has  config, find if it has one for
-                        //this name.
+                        //this title.
                         if (mapValue) {
                             mapValue = mapValue[nameSegment];
                             if (mapValue) {
-                                //Match, update name to the new value.
+                                //Match, update title to the new value.
                                 foundMap = mapValue;
                                 foundI = i;
                                 break;
@@ -228,7 +228,7 @@ var requirejs, require, define;
     }
 
     //Turns a plugin!resource to [plugin, resource]
-    //with the plugin being undefined if the name
+    //with the plugin being undefined if the title
     //did not have a plugin prefix.
     function splitPrefix(name) {
         var prefix,
@@ -247,7 +247,7 @@ var requirejs, require, define;
     }
 
     /**
-     * Makes a name map, normalizing the name, and using a plugin
+     * Makes a title map, normalizing the title, and using a plugin
      * for normalization if necessary. Grabs a ref to plugin
      * too, as an optimization.
      */
@@ -324,7 +324,7 @@ var requirejs, require, define;
             callbackType = typeof callback,
             usingExports;
 
-        //Use name if no relName
+        //Use title if no relName
         relName = relName || name;
         relParts = makeRelParts(relName);
 
@@ -376,7 +376,7 @@ var requirejs, require, define;
             }
         } else if (name) {
             //May just be an object definition for the module. Only
-            //worry about defining if have a module name.
+            //worry about defining if have a module title.
             defined[name] = callback;
         }
     };
@@ -388,9 +388,9 @@ var requirejs, require, define;
                 return handlers[deps](callback);
             }
             //Just return the module wanted. In this scenario, the
-            //deps arg is the module name, and second arg (if passed)
+            //deps arg is the module title, and second arg (if passed)
             //is just the relName.
-            //Normalize module name, if it contains . or ..
+            //Normalize module title, if it contains . or ..
             return callDep(makeMap(deps, makeRelParts(callback)).f);
         } else if (!deps.splice) {
             //deps is a config object, not an array.
@@ -456,7 +456,7 @@ var requirejs, require, define;
 
     define = function (name, deps, callback) {
         if (typeof name !== 'string') {
-            throw new Error('See almond README: incorrect module build, no module name');
+            throw new Error('See almond README: incorrect module build, no module title');
         }
 
         //This module may not have dependencies
@@ -798,7 +798,7 @@ S2.define('select2/utils',[
 
   Utils.StoreData = function (element, name, value) {
     // Stores an item in the cache for a specified element.
-    // name is the cache key.
+    // title is the cache key.
     var id = Utils.GetUniqueElementId(element);
     if (!Utils.__cache[id]) {
       Utils.__cache[id] = {};
@@ -808,8 +808,8 @@ S2.define('select2/utils',[
   };
 
   Utils.GetData = function (element, name) {
-    // Retrieves a value from the cache by its key (name)
-    // name is optional. If no name specified, return
+    // Retrieves a value from the cache by its key (title)
+    // title is optional. If no title specified, return
     // all cache items for the specified element.
     // and for a specified element.
     var id = Utils.GetUniqueElementId(element);
@@ -5166,7 +5166,7 @@ S2.define('select2/defaults',[
 
       if (typeof language === 'string') {
         try {
-          // Try to load it with the original name
+          // Try to load it with the original title
           languageData = Translation.loadPath(language);
         } catch (e) {
           try {
@@ -5311,7 +5311,7 @@ S2.define('select2/options',[
         // This is more than likely the jQuery data helper
         var dataValue = Utils.GetData($e[0], dataName);
 
-        // camelCase the attribute name to match the spec
+        // camelCase the attribute title to match the spec
         var camelDataName = dataName.replace(/-([a-z])/g, upperCaseLetter);
 
         // Store the data attribute contents into the dataset since

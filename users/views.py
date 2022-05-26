@@ -16,29 +16,34 @@ class ProfileInfo(DetailView):
     pk_url_kwarg = 'id'
     context_object_name = 'user'
 
-
     def post(self, request, id):
-        a = MyUser.objects.get(id=id).filmusersinfo_set.get(film_info_id=self.request.POST['filmid'])
-        a.series = self.request.POST["series"]
-        a.save()
+        user_films = MyUser.objects.get(id=id).filmusersinfo_set.get(film_id=self.request.POST['filmid'])
+        user_films.series = self.request.POST["series"]
+        user_films.save()
         return redirect('users:profile', id)
 
     def get_context_data(self, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['form'] = FilmListView
         try:
+            context['form'].base_fields['series'].initial = self.request.GET['filmlist']
             movilist = self.request.GET['filmlist']
         except:
+            context['form'].base_fields['series'].initial = 'abandoned'
             movilist = 'abandoned'
-        context['filminfo'] = Film.objects.filter(filmusersinfo__users_info_id=context['user'].id,
-                                                  filmusersinfo__series=movilist)
+        context['filminfo'] = Film.objects.filter(
+            filmusersinfo__user_id=context['user'].id,
+            filmusersinfo__series=movilist
+        )
         return context
+
 
 def published_list(request):
     model = MyUser.objects.get(id=request.user.id)
     model.is_published = not model.is_published
     model.save()
     return redirect('users:profile', request.user.id)
+
 
 class RegisterUser(CreateView):
     form_class = RegisterUserForm

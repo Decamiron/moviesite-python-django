@@ -4,42 +4,42 @@ from django.urls import reverse
 
 
 class Genre(models.Model):
-    name = models.CharField("Категория", max_length=150)
+    title = models.CharField("Категория", max_length=150)
     description = models.TextField("Описание")
     slug = models.SlugField("URL", max_length=100, unique=True, db_index=True)
 
     def __str__(self):
-        return self.name
+        return self.title
 
     class Meta:
         verbose_name = "Жанр"
         verbose_name_plural = "Жанры"
-        ordering = ['name']
+        ordering = ['title']
 
 
 class Country(models.Model):
-    name = models.CharField("Страна", max_length=100)
+    title = models.CharField("Страна", max_length=100)
     slug = models.SlugField("URL", max_length=100, unique=True, db_index=True)
 
     def __str__(self):
-        return self.name
+        return self.title
 
     class Meta:
         verbose_name = "Страна"
         verbose_name_plural = "Страны"
-        ordering = ['name']
+        ordering = ['title']
 
 
 class Series(models.Model):
-    name = models.CharField("Название серии фильмов", max_length=100)
+    title = models.CharField("Название серии фильмов", max_length=100)
 
     def __str__(self):
-        return self.name
+        return self.title
 
     class Meta:
         verbose_name = "Серия фильмов"
         verbose_name_plural = "Серии фильмов"
-        ordering = ['name']
+        ordering = ['title']
 
 
 class Film(models.Model):

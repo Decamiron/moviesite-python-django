@@ -14,8 +14,8 @@ class CustomUserAdmin(admin.ModelAdmin):
 
 class FilmUsersInfoAdmin(admin.ModelAdmin):
     model = FilmUsersInfo
-    list_display = ['id', 'users_info', 'film_info', 'series', 'raiting' ]
-    search_fields = ['users_info__username', 'film_info__title']
+    list_display = ['id', 'user', 'film', 'series', 'raiting']
+    search_fields = ['users_info__username', 'film__title']
 
 
 admin.site.register(MyUser, CustomUserAdmin)

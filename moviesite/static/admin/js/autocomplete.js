@@ -9,8 +9,8 @@
                         term: params.term,
                         page: params.page,
                         app_label: $element.data('app-label'),
-                        model_name: $element.data('model-name'),
-                        field_name: $element.data('field-name')
+                        model_name: $element.data('model-title'),
+                        field_name: $element.data('field-title')
                     };
                 }
             }
@@ -30,7 +30,7 @@
     $(function() {
         // Initialize all autocomplete widgets except the one in the template
         // form used when a new formset is added.
-        $('.admin-autocomplete').not('[name*=__prefix__]').djangoAdminSelect2();
+        $('.admin-autocomplete').not('[title*=__prefix__]').djangoAdminSelect2();
     });
 
     $(document).on('formset:added', (function() {
