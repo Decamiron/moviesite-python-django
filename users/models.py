@@ -25,20 +25,29 @@ class MyUser(AbstractUser):
 
 
 class FilmUsersInfo(models.Model):
+    none_list = ''
+    planned = 'Planned'
+    viewed = 'Viewed'
+    abandoned = 'Abandoned'
+
     FILMLIST = (
-        ('Planned', 'Запланировано'),
-        ('Viewed', 'Прсомотрено'),
-        ('Abandoned', 'Брошено'),
-        ('None', 'Не в списке'),
+        (planned, 'Запланировано'),
+        (viewed, 'Прсомотрено'),
+        (abandoned, 'Брошено'),
+        (none_list, 'Не в списке'),
     )
 
-    RAITING = (
-        (1, 1), (2, 2), (3, 3), (4, 4), (5, 5)
+    RATING = (
+        (1, 1),
+        (2, 2),
+        (3, 3),
+        (4, 4),
+        (5, 5)
     )
 
-    raiting = models.PositiveSmallIntegerField('Рейтинг', choices=RAITING, blank=True, null=True)
+    rating = models.PositiveSmallIntegerField('Рейтинг', choices=RATING, blank=True, null=True)
     comment = models.TextField('Комментарий', max_length=1000, blank=True, null=True)
-    series = models.CharField('Список', choices=FILMLIST, blank=True, null=True, max_length=9, default=None)
+    filmlist = models.CharField('Список', choices=FILMLIST, blank=True, max_length=9, default=None)
     user = models.ForeignKey('MyUser', on_delete=models.CASCADE)
     film = models.ForeignKey('main.Film', on_delete=models.CASCADE)
 
