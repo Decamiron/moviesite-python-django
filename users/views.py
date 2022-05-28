@@ -18,7 +18,7 @@ class ProfileInfo(DetailView):
 
     def post(self, request, id):
         user_films = MyUser.objects.get(id=id).filmusersinfo_set.get(film_id=self.request.POST['filmid'])
-        user_films.series = self.request.POST["series"]
+        user_films.filmlist = self.request.POST["filmlist"]
         user_films.save()
         return redirect('users:profile', id)
 
@@ -26,14 +26,14 @@ class ProfileInfo(DetailView):
         context = super().get_context_data(**kwargs)
         context['form'] = FilmListView
         try:
-            context['form'].base_fields['series'].initial = self.request.GET['filmlist']
+            context['form'].base_fields['filmlist'].initial = self.request.GET['filmlist']
             movilist = self.request.GET['filmlist']
         except:
-            context['form'].base_fields['series'].initial = 'abandoned'
+            context['form'].base_fields['filmlist'].initial = 'abandoned'
             movilist = 'abandoned'
         context['filminfo'] = Film.objects.filter(
             filmusersinfo__user_id=context['user'].id,
-            filmusersinfo__series=movilist
+            filmusersinfo__filmlist=movilist
         )
         return context
 
