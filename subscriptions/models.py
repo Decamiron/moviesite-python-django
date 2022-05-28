@@ -11,7 +11,24 @@ class SubscriptionType(models.Model):
         (gold, "Gold")
     )
 
-    title = models.CharField(choices=SUBSCRIPTION_TYPES, max_length=10)
+    usd = "usd"
+    grn = "grn"
+    euro = "euro"
+
+    PAYMENTS_METHODS = (
+        (usd, "USD"),
+        (grn, "Grivna"),
+        (euro, "Euro"),
+    )
+
+    title = models.CharField(max_length=10)
+    type = models.CharField(choices=SUBSCRIPTION_TYPES, max_length=10)
+    price = models.PositiveIntegerField()
+    payment_method = models.CharField(choices=PAYMENTS_METHODS, max_length=7)
+    duration = models.PositiveIntegerField(help_text="Duration in days")
+
+    def __str__(self):
+        return f"{self.title} - {self.type}"
 
     class Meta:
         verbose_name = "Тип подписки"
@@ -30,6 +47,9 @@ class Subscription(models.Model):
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
     expires_at = models.DateField()
+
+    def __str__(self):
+        return f"{self.user.username} - {self.type}"
 
     class Meta:
         verbose_name = "Подписка"

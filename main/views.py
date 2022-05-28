@@ -1,19 +1,20 @@
 from django.contrib import auth
 from django.db.models import Avg, Q
 from django.shortcuts import render, HttpResponse, redirect
-from django.views.generic import *
+from django.views.generic import ListView, DetailView, CreateView
 
 import users.models
 from main.forms import Comments
-from main.models import *
+from main.models import Film, Genre, Country, Series
 from users.forms import FilmListView
+from users.models import FilmUsersInfo
 
 
 class GenreCountry:
     def get_genres(self):
         return Genre.objects.all()
 
-    def get_countrys(self):
+    def get_countries(self):
         return Country.objects.all()
 
 
@@ -29,10 +30,6 @@ class FilmHome(GenreCountry, ListView):
         return context
 
 
-def about(request):
-    return render(request, 'main/about.html')
-
-
 class MovieDetail(DetailView):
     model = Film
     template_name = 'main/film_detail.html'
@@ -44,21 +41,9 @@ class MovieDetail(DetailView):
         context['film_series'] = Film.objects.filter(series_id=context['film'].series_id).exclude(id=context['film'].id)
         context['form'] = Comments
         context['list_form'] = FilmListView
-        context['raiting'] = users.models.FilmUsersInfo.objects.filter(film_id=context['film'].pk).aggregate(
-            res=Avg('raiting'))
+        context['rating'] = FilmUsersInfo.objects.filter(film_id=context['film'].pk).aggregate(
+            res=Avg('rating'))
         return context
-
-
-def change_list(request, id):
-    print('ChangeList')
-    try:
-        a = users.models.FilmUsersInfo.objects.get(user_id=request.user.id, film_id=id)
-        a.series = request.POST['series']
-    except:
-        a = users.models.FilmUsersInfo(series=request.POST['series'], user_id=request.user.id, film_id=id)
-    finally:
-        a.save()
-    return redirect('main:index')
 
 
 class CommentFilm(CreateView):
@@ -70,17 +55,18 @@ class CommentFilm(CreateView):
     def post(self, request, pk):
         user = auth.get_user(request)
         try:
-            info = users.models.FilmUsersInfo.objects.get(film_id=pk, user_id=user.pk)
-            info.raiting = request.POST['raiting']
+            info = FilmUsersInfo.objects.get(film_id=pk, user_id=user.pk)
+            info.rating = request.POST['rating']
             info.comment = request.POST['comment']
             info.save()
         except:
-            users.models.FilmUsersInfo(
-                raiting=request.POST['raiting'],
+            FilmUsersInfo.objects.create(
+                rating=request.POST['rating'],
                 comment=request.POST['comment'],
+                filmlist=FilmUsersInfo.none_list,
                 film_id=pk,
                 user_id=user.pk
-            ).save()
+            )
 
         return redirect('main:index')
 
@@ -108,6 +94,21 @@ class GenreFilter(GenreCountry, ListView):
         context = super().get_context_data(**kwargs)
         # context['films'] = self.get_queryset()
         return context
+
+
+def change_list(request, id):
+    try:
+        user_film = FilmUsersInfo.objects.get(user_id=request.user.id, film_id=id)
+        user_film.filmlist = request.POST['filmlist']
+    except FilmUsersInfo.DoesNotExist:
+        user_film = FilmUsersInfo(filmlist=request.POST['filmlist'], user_id=request.user.id, film_id=id)
+
+    user_film.save()
+    return redirect('main:index')
+
+
+def about(request):
+    return render(request, 'main/about.html')
 
 
 def pageNotFound(request, exception):

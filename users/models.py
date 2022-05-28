@@ -19,7 +19,7 @@ class MyUser(AbstractUser):
     def get_absolute_url(self):
         return reverse("users:profile", kwargs={"id": self.pk})
 
-    class Meta():
+    class Meta:
         verbose_name = "Юзер"
         verbose_name_plural = "Юзеры"
 
@@ -54,7 +54,7 @@ class FilmUsersInfo(models.Model):
     def __str__(self):
         return f'Review: _{self.user.get_username()}_ to {self.film.get_title()}'
 
-    class Meta():
+    class Meta:
         verbose_name = "Информация о фильме"
         verbose_name_plural = "Информация о фильмах"
 

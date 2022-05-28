@@ -11,6 +11,16 @@ class FilmAdmin(admin.ModelAdmin):
     search_fields = ('title', 'description')
     list_filter = ('premiere', 'genre')
     prepopulated_fields = {"slug": ("title",)}
+    fields = (
+        'title',
+        'slug',
+        'description',
+        'poster_url',
+        'year',
+        'premiere',
+        ('genre', 'country'),
+        'series',
+    )
     formfield_overrides = {
         models.ManyToManyField: {'widget': CheckboxSelectMultiple},
     }

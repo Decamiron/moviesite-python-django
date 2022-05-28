@@ -44,11 +44,11 @@
                 <time class="text-light">{{film.premiere}}</time>
             </div>
             <hr>
-            <div class="container-fluid text-info fs-5">Raiting:
-                <i class="text-white">{{raiting.res}}</i>
+            <div class="container-fluid text-info fs-5">rating:
+                <i class="text-white">{{rating.res}}</i>
             </div>
             <hr>
-            {% if user.is_authenticated %}
+            {% if rating.is_authenticated %}
             <div class="container-fluid text-info fs-5">Добавить в список:
                 <form action="{%url 'main:change_list' film.id%}" method="post" name="change_list">
                     {%csrf_token%}
@@ -93,15 +93,15 @@
     <!--All coments-->
     <p class="text-center text-info fs-3"> КОММЕНТАРИИ: </p>
     {%for f in film.filmusersinfo_set.all%}
-    {%if f.raiting != None%}
+    {%if f.rating != None%}
     <div class="container border border-white my-2 mx-auto row ">
         <div class="col-3 my-2 mx-auto text-center">
-            <a href="{% url 'users:profile' f.users_info.pk%}">
+            <a href="{% url 'users:profile' f.user.pk%}">
                 <img width="100%" height="auto" class="border border-info rounded-circle"
-                     src="{{f.users_info.photo.url}}">
-                <h5 class="text-info mx-auto text-center ">{{f.users_info.username|upper}}</h5>
+                     src="{{f.user.photo.url}}">
+                <h5 class="text-info mx-auto text-center ">{{f.user.ratingname|upper}}</h5>
             </a>
-            <p class="text-warning fs-5">Оценка: {{f.raiting}} из 5</p>
+            <p class="text-warning fs-5">Оценка: {{f.rating}} из 5</p>
         </div>
         <p class="col-9 text-warning fs-5">{{f.comment}}</p>
     </div>
