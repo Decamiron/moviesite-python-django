@@ -45,7 +45,11 @@
             </div>
             <hr>
             <div class="container-fluid text-info fs-5">rating:
+                {% if rating.res %}
                 <i class="text-white">{{rating.res}}</i>
+                {%  else %}
+                    <i class="text-white">Нет рейтинга</i>
+                {%  endif %}
             </div>
             <hr>
             {% if rating.is_authenticated %}

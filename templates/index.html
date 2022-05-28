@@ -172,7 +172,7 @@
                     <p class="text-warning h3">Country:</p>
                     <select multiple class="border border-2 bootstrap-select bg-dark mx-auto text-center text-white"  size="7"
                             name="country">
-                        {% for country in view.get_countrys %}
+                        {% for country in view.get_countries %}
                         <option value="{{country.id}}">{{country.title}}</option>
                         {%endfor%}
                     </select>
