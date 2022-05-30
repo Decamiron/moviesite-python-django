@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.db.models import Avg
 from django.urls import reverse
@@ -11,6 +12,13 @@ class Genre(models.Model):
 
     def get_films(self):
         return self.films.all()
+
+    def clean(self):
+        if not self.slug or not self.title:
+            raise ValidationError("Invalid data")
+
+        if self.slug in self._meta.model.objects.all().values_list('slug', flat=True):
+            raise ValidationError("Этот слаг уже существует")
 
     def __str__(self):
         return self.title
@@ -28,6 +36,13 @@ class Country(models.Model):
     def get_films(self):
         return self.films.all()
 
+    def clean(self):
+        if not self.slug or not self.title:
+            raise ValidationError("Invalid data")
+
+        if self.slug in self._meta.model.objects.all().values_list('slug', flat=True):
+            raise ValidationError("Этот слаг уже существует")
+
     def __str__(self):
         return self.title
 
@@ -43,6 +58,13 @@ class Series(models.Model):
 
     def get_films(self):
         return self.films.all()
+
+    def clean(self):
+        if not self.slug or not self.title:
+            raise ValidationError("Invalid data")
+
+        if self.slug in self._meta.model.objects.all().values_list('slug', flat=True):
+            raise ValidationError("Этот слаг уже существует")
 
     def __str__(self):
         return self.title
@@ -78,6 +100,14 @@ class Film(models.Model):
 
     def get_title(self):
         return str(self.title)
+
+    def clean(self):
+        if not (self.slug and self.title and self.description and self.poster_url and self.year and self.country \
+                and self.genre and self.premiere and self.series):
+            raise ValidationError("Invalid data")
+
+        if self.slug in self._meta.model.objects.all().values_list('slug', flat=True):
+            raise ValidationError("Этот слаг уже существует")
 
     def __str__(self):
         return self.title
