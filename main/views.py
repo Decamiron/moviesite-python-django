@@ -81,19 +81,16 @@ class GenreFilter(GenreCountry, ListView):
     context_object_name = 'films'
 
     def get_queryset(self):
-        queryset = Film.objects.filter(
-            Q(genre__in=self.request.GET.getlist("genre")) & Q(
-                country__in=self.request.GET.getlist("country"))).distinct()
-        if len(queryset) == 0:
-            queryset = Film.objects.filter(
-                Q(genre__in=self.request.GET.getlist("genre")) | Q(
-                    country__in=self.request.GET.getlist("country"))).distinct()
-        return queryset
+        genres = self.request.GET.getlist("genre")
+        countries = self.request.GET.getlist("country")
+        query = Q(genre__in=genres) | Q(country__in=countries)
 
-    def get_context_data(self, object_list=None, **kwargs):
-        context = super().get_context_data(**kwargs)
-        # context['films'] = self.get_queryset()
-        return context
+        if genres and countries:
+            query = Q(genre__in=genres) & Q(country__in=countries)
+
+        queryset = Film.objects.filter(query).distinct()
+
+        return queryset
 
 
 def change_list(request, id):
