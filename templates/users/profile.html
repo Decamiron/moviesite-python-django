@@ -32,7 +32,7 @@
                     </h3>
                     <b class="small mb-0"><i class="fas fa-map-marker-alt mr-2"></i>Age: {{user.age}} y.o</b>
                     <p class="text-info mb-0">Email: <small class="text-white">{{user.email}}</small></p>
-                    <p class="text-info mb-0">Birthday: <small class="text-white">{{user.birth_date}}</small></p>
+                    <p class="text-info mb-0">Birthday: <small class="text-white">{% if user.birth_date %}{{user.birth_date}}{% else %} - {% endif %}</small></p>
                     <p class="text-info mb-0">Last login: <small class="text-white">{{user.last_login}}</small></p>
                     {% if request.user.id == user.id %}
                     <form action="{%url 'users:published_list'%}" class="mb-3" method="post">
