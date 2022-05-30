@@ -68,14 +68,10 @@ class FilmUsersInfo(models.Model):
     )
 
     rating = models.PositiveSmallIntegerField('Рейтинг', choices=RATING, blank=True, null=True)
-    comment = models.TextField('Комментарий', max_length=1000, blank=True, null=True)
+    comment = models.TextField('Комментарий', max_length=1000, blank=True)
     filmlist = models.CharField('Список', choices=FILMLIST, blank=True, max_length=9, default=None)
     user = models.ForeignKey('MyUser', on_delete=models.CASCADE)
     film = models.ForeignKey('main.Film', on_delete=models.CASCADE)
-
-    def clean(self):
-        if not (self.filmlist and self.film and self.user):
-            raise ValidationError("Invalid rating or comment")
 
     def __str__(self):
         return f'Review: _{self.user.get_username()}_ to {self.film.get_title()}'

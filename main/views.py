@@ -41,10 +41,7 @@ class MovieDetail(DetailView):
         context['film_series'] = Film.objects.filter(series_id=context['film'].series_id).exclude(id=context['film'].id)
         context['form'] = Comments
         context['list_form'] = FilmListView
-        try:
-            context['series_name'] = context['film_series'].series.title
-        except:
-            context['series_name'] = ''
+        context['series_name'] = context['film_series'].series.title if context['film_series'].series else ''
         context['rating'] = FilmUsersInfo.objects.filter(film_id=context['film'].pk).aggregate(res=Avg('rating'))
         return context
 
