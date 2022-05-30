@@ -38,7 +38,11 @@ class CountryAdmin(admin.ModelAdmin):
     list_filter = ('title',)
 
 
+class SeriesAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"slug": ("title",)}
+
+
 admin.site.register(Film, FilmAdmin)
 admin.site.register(Genre, GenreAdmin)
-admin.site.register(Series)
+admin.site.register(Series, SeriesAdmin)
 admin.site.register(Country, CountryAdmin)

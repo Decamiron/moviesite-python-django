@@ -13,6 +13,14 @@ class MyUser(AbstractUser):
     is_published = models.BooleanField('Публичный список фильмов', default=True)
     REQUIRED_FIELDS = ['email']
 
+    def get_viewed_films(self, filmlist):
+        user_reviews = self.filmusersinfo_set.filter(filmlist=filmlist)
+        if user_reviews:
+            return [ur.film for ur in user_reviews]
+
+    def has_subscription(self):
+        return self.subscription.exists()
+
     def get_username(self):
         return str(self.username)
 

@@ -48,6 +48,9 @@ class Subscription(models.Model):
     updated_at = models.DateField(auto_now=True)
     expires_at = models.DateField()
 
+    def get_subscription_type(self):
+        return self.type
+
     def __str__(self):
         return f"{self.user.username} - {self.type}"
 

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     'main.apps.MainConfig',
+    'license.apps.LicenseConfig',
     'subscriptions.apps.SubscriptionsConfig',
     'captcha'
 ]

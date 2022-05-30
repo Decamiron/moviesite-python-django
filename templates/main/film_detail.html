@@ -64,7 +64,7 @@
             <!--Series-->
             {%if film_series%}
             <div class="container my-3">
-                <p class="fs-5 text-center text-white">Из той же серии</p>
+                <p class="fs-5 text-center text-white">Из той же серии: {{ series_name }}</p>
                 <div class="row row-cols-sm-3 row-cols-md-3 row-cols-lg-5 rounded mb-3">
                     {%for series in film_series %}
                     <a class="h-100 border rounded rounded-3 border-light bg-dark col text-center mx-2"

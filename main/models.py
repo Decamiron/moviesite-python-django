@@ -1,13 +1,16 @@
 from django.conf import settings
 from django.db import models
+from django.db.models import Avg
 from django.urls import reverse
-from django.utils.text import slugify
 
 
 class Genre(models.Model):
     title = models.CharField("Категория", max_length=150)
     description = models.TextField("Описание")
     slug = models.SlugField("URL", max_length=100, unique=True, db_index=True)
+
+    def get_films(self):
+        return self.films.all()
 
     def __str__(self):
         return self.title
@@ -22,6 +25,9 @@ class Country(models.Model):
     title = models.CharField("Страна", max_length=100)
     slug = models.SlugField("URL", max_length=100, unique=True, db_index=True)
 
+    def get_films(self):
+        return self.films.all()
+
     def __str__(self):
         return self.title
 
@@ -34,6 +40,9 @@ class Country(models.Model):
 class Series(models.Model):
     title = models.CharField("Название серии фильмов", max_length=100)
     slug = models.SlugField("URL", max_length=100, unique=True, db_index=True)
+
+    def get_films(self):
+        return self.films.all()
 
     def __str__(self):
         return self.title
@@ -50,10 +59,22 @@ class Film(models.Model):
     description = models.TextField("Описание")
     poster_url = models.URLField("Картинка в интернете", default=settings.DEFAULT_IMAGE)
     year = models.PositiveSmallIntegerField("Дата выхода", default=2000)
-    country = models.ManyToManyField("Country", verbose_name='страны', related_name='country')
-    genre = models.ManyToManyField('Genre', verbose_name='жанры', related_name='genre')
+    country = models.ManyToManyField("Country", verbose_name='страны', related_name='films')
+    genre = models.ManyToManyField('Genre', verbose_name='жанры', related_name='films')
     premiere = models.DateTimeField("Дата премьеры")
-    series = models.ForeignKey('Series', on_delete=models.PROTECT, verbose_name='Серия фильмов', related_name='series')
+    series = models.ForeignKey('Series', on_delete=models.PROTECT, verbose_name='Серия фильмов', related_name='films')
+
+    def get_reviews(self):
+        return self.filmusersinfo_set.filter(rating__isnull=False)
+
+    def get_countries(self):
+        return self.country.all()
+
+    def get_genres(self):
+        return self.genre.all()
+
+    def get_film_rating(self):
+        return self.filmusersinfo_set.filter(film_id=self.pk).aggregate(res=Avg('rating'))
 
     def get_title(self):
         return str(self.title)
