@@ -17,9 +17,10 @@ class MyUser(AbstractUser):
     REQUIRED_FIELDS = ['email']
 
     def clean(self):
-        super(MyUser, self).clean()
+        data = super(MyUser, self).clean()
         if not self.email or not self.username:
             raise ValidationError("no email or username")
+        return data
 
     def save(self, *args, **kwargs):
         if self.birth_date:

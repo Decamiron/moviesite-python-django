@@ -5,7 +5,7 @@ from django.views.generic import ListView, DetailView, CreateView
 
 import users.models
 from main.forms import Comments
-from main.models import Film, Genre, Country, Series
+from main.models import Film, Genre, Country
 from users.forms import FilmListView
 from users.models import FilmUsersInfo
 
