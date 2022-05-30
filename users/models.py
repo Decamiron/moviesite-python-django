@@ -1,17 +1,31 @@
+import datetime
+
 from django.contrib.auth.models import AbstractUser
-from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.urls import reverse
-import datetime as date
+
+from users.utils import birthday_validators, age_validators
 
 
 class MyUser(AbstractUser):
-    photo = models.ImageField('Фотография', upload_to='users_photo', blank=True, default='users/unknow.png')
-    birth_date = models.DateField('День Рождения', default='2002-09-20', blank=True, validators=[MinValueValidator(limit_value=date.date(1900, 1, 1)), MaxValueValidator(limit_value=date.date.today)])
-    age = models.PositiveSmallIntegerField("Возраст", default=18, blank=True, validators=[MinValueValidator(8), MaxValueValidator(100)])
+    photo = models.ImageField('Фотография', upload_to='users_photo', null=True, default='users/unknow.png')
+    birth_date = models.DateField('День Рождения', null=True, validators=birthday_validators())
+    age = models.PositiveSmallIntegerField("Возраст", null=True, validators=age_validators())
     about_user = models.TextField("О себе", blank=True, max_length=500)
     is_published = models.BooleanField('Публичный список фильмов', default=True)
     REQUIRED_FIELDS = ['email']
+
+    def clean(self):
+        super(MyUser, self).clean()
+        if not self.email or not self.username:
+            raise ValidationError("no email or username")
+
+    def save(self, *args, **kwargs):
+        if self.birth_date:
+            self.age = datetime.datetime.now().year - self.birth_date.year
+
+        super(MyUser, self).save(*args, **kwargs)
 
     def get_viewed_films(self, filmlist):
         user_reviews = self.filmusersinfo_set.filter(filmlist=filmlist)
@@ -58,6 +72,10 @@ class FilmUsersInfo(models.Model):
     filmlist = models.CharField('Список', choices=FILMLIST, blank=True, max_length=9, default=None)
     user = models.ForeignKey('MyUser', on_delete=models.CASCADE)
     film = models.ForeignKey('main.Film', on_delete=models.CASCADE)
+
+    def clean(self):
+        if not (self.filmlist and self.film and self.user):
+            raise ValidationError("Invalid rating or comment")
 
     def __str__(self):
         return f'Review: _{self.user.get_username()}_ to {self.film.get_title()}'
